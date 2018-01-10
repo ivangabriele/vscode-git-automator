@@ -71,5 +71,8 @@
   "bugs": {
     "url": "https://github.com/ivangabriele/vscode-git-add-and-commit/issues"
   },
-  "homepage": "https://github.com/ivangabriele/vscode-git-add-and-commit#readme"
+  "homepage": "https://github.com/ivangabriele/vscode-git-add-and-commit#readme",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
 }
