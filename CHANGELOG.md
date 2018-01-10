@@ -23,10 +23,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add git add & commit current file command
 - Add git reset fallback on cancel or errors
 
-## [1.1.0] - 2018-01-09
+## [1.1.0] - 2018-01-10
 
 ### Added
 - Add extension icon
 
 ### Changed
 - Upgrade depedencies
+
+## [1.1.1] - 2018-01-10
+
+### Removed
+- Remove a package keyword
