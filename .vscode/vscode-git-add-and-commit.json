@@ -1,5 +1,6 @@
 {
   "prefillCommitMessage": {
+    "disableOptionalMessages": true,
     "forceLowerCase": true,
     "ignoreFileExtension": true,
     "replacePatternWith": [
