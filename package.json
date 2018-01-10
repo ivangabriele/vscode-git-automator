@@ -1,6 +1,6 @@
 {
   "name": "vscode-git-add-and-commit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "displayName": "Git Add & Commit",
   "description": "Add and commit files in one shortcut.",
   "main": "./out/extension",
