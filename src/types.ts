@@ -1,3 +1,9 @@
+export interface GitStatusFile {
+  oldPath?: string
+  path: string
+  state: 'ADDED' | 'DELETED' | 'MODIFIED' | 'RENAMED'
+}
+
 export interface SettingsPattern {
   pattern: string
   with: string
