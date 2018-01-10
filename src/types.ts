@@ -66,7 +66,8 @@ export interface Settings {
       Try to guess the action when it's obvious and add it to the prefilled commit message.
 
       @description
-      - If the file has been created (for Git), it will add "create" to the commit message.
+      - If the file has been added (for Git), it will add "create" to the commit message.
+      - If the file has been renamed (for Git), it will add "rename" or "move" to the commit message.
       - If the file has been deleted (for Git), it will add "remove" to the commit message.
 
       @note
