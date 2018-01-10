@@ -77,3 +77,8 @@ _Please do **NOT** use this release._
 ### Fixed
 - Fix status bar message
 - Fix unnecessary double quotes in commit message
+
+## [1.3.2] - 2018-01-10
+
+### Changed
+- Update readme
