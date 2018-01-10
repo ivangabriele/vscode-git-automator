@@ -21,6 +21,12 @@ export interface Settings {
   prefillCommitMessage?: {
     /*
       @description
+      Show "optional" warning and info messages in the status bar instead of the top modals.
+    */
+    disableOptionalMessages?: boolean
+
+    /*
+      @description
       Force all character in the prefilled commit message to be in lower case.
 
       @example
