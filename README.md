@@ -1,6 +1,9 @@
 # Git Add & Commit Extension for Visual Studio Code
 
-## Add and commit all or current file(s) in one shortcut under VS Code.
+- **Add and commit all or current file(s) in one shortcut under VS Code.**
+- **Auto-prefill commit messages.**
+
+And yes, I'm lazy !
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![GitHub](https://img.shields.io/github/release/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://github.com/ivangabriele/vscode-git-add-and-commit/releases)
@@ -25,6 +28,29 @@
 1. Hit **Ctrl + Shift + Z** (PC) / **Cmd + Shift + Z** (Mac)
 2. Enter the commit message.
 3. Press **ENTER**.
+
+### Setup the auto-prefill for commit messages
+
+First, create a `vscode-git-add-and-commit.json` file in your `.vscode` workspace directory.
+
+Here is a sample :
+
+```json
+{
+  "prefillCommitMessage": {
+    "ignoreFileExtension": true,
+    "replacePatternWith": [
+      {
+        "pattern": "package",
+        "with": "npm"
+      }
+    ],
+    "withFileWorkspacePath": true,
+    "withGuessedAction": true
+  }
+}
+
+Please check the `Settings` interface in [this file](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/src/types.ts) to see the possible options, examples and notes.
 
 ## Issues
 
