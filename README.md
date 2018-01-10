@@ -1,6 +1,6 @@
 # Git Add & Commit Extension for Visual Studio Code
 
-## Add and commit all or current file(s) in one shortcut under VS Code. Just because I'm a lazy guy.
+## Add and commit all or current file(s) in one shortcut under VS Code.
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![GitHub](https://img.shields.io/github/release/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://github.com/ivangabriele/vscode-git-add-and-commit/releases)
