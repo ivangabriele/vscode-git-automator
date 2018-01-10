@@ -4,7 +4,7 @@
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![GitHub](https://img.shields.io/github/release/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://github.com/ivangabriele/vscode-git-add-and-commit/releases)
-[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/ivangabriele.badges.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=ivangabriele.badges)
+[![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/ivangabriele.vscode-git-add-and-commit.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=ivangabriele.vscode-git-add-and-commit)
 [![David](https://img.shields.io/david/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
 [![David](https://img.shields.io/david/dev/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
 
