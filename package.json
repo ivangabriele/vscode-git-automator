@@ -53,6 +53,7 @@
     "url": "http://www.ivangabriele.com"
   },
   "publisher": "ivangabriele",
+  "icon": "res/icon.png",
   "categories": [
     "Other"
   ],
