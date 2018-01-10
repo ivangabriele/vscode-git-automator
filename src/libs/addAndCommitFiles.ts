@@ -6,6 +6,7 @@ import getGitStatusFiles from '../helpers/getGitStatusFiles'
 import gitAdd from '../helpers/gitAdd'
 import gitCommit from '../helpers/gitCommit'
 import replaceStringWith from '../helpers/replaceStringWith'
+import showOptionalMessage from '../helpers/showOptionalMessage'
 import validateCommitMessage from '../helpers/validateCommitMessage'
 
 import { GitStatusFile, Settings } from '../types';
@@ -104,14 +105,14 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
     vscode.window.showErrorMessage(err)
     console.error(err)
 
-    return cancelAdd(filesRelativePaths)
+    return cancelAdd(filesRelativePaths, settings)
   }
 
   // Check if the commit message is valid
   if (!validateCommitMessage(commitMessage)) {
-    vscode.window.showWarningMessage(`You can't commit with an empty commit message.`)
+    showOptionalMessage(`You can't commit with an empty commit message.`, settings, true)
 
-    return cancelAdd(filesRelativePaths)
+    return cancelAdd(filesRelativePaths, settings)
   }
 
   // ----------------------------------
@@ -126,12 +127,12 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
       vscode.window.showErrorMessage(err)
       console.error(err)
 
-      return cancelAdd(filesRelativePaths)
+      return cancelAdd(filesRelativePaths, settings)
     }
   }
 
   // ----------------------------------
   // END
 
-  vscode.window.showInformationMessage(`File(s) committed to Git with the message: "${commitMessage}".`)
+  showOptionalMessage(`File(s) committed to Git with the message: "${commitMessage}".`, settings)
 }
