@@ -1,6 +1,6 @@
 # Git Add & Commit Extension for Visual Studio Code
 
-> Add and commit all or current file(s) in one shortcut under VS Code. Just because I'm a lazy guy.
+## Add and commit all or current file(s) in one shortcut under VS Code. Just because I'm a lazy guy.
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![GitHub](https://img.shields.io/github/release/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://github.com/ivangabriele/vscode-git-add-and-commit/releases)
@@ -11,15 +11,6 @@
 [![NSP Status](https://nodesecurity.io/orgs/ivan-gabriele/projects/06083557-7055-4c2d-a1f0-e9f10c671faf/badge)](https://nodesecurity.io/orgs/ivan-gabriele/projects/06083557-7055-4c2d-a1f0-e9f10c671faf)
 
 ---
-
-## Installation
-
-1. Open up VS Code
-2. Type **`F1`**
-3. Type `ext` in command palette.
-4. Select `Extensions: Install Extension` and hit **`ENTER`**
-5. Type `tfs`
-6. Select **`TFS`** extension and hit **`ENTER`**
 
 ## Usage
 
