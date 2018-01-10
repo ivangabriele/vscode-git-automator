@@ -19,7 +19,7 @@ export default async function(command: string, args: string[]): Promise<any> {
       batch.on('close', function() {
         if (stderr !== '') return reject(stderr.trim())
 
-        resolve()
+        resolve(stdout)
       })
     }
     catch (err) {
