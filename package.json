@@ -74,6 +74,7 @@
   },
   "homepage": "https://github.com/ivangabriele/vscode-git-add-and-commit#readme",
   "dependencies": {
+    "jsonschema": "^1.2.2",
     "ramda": "^0.25.0"
   }
 }
