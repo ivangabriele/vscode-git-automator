@@ -4,10 +4,10 @@
     "forceLowerCase": true,
     "ignoreFileExtension": true,
     "replacePatternWith": [
-      {
-        "pattern": "package",
-        "with": "npm"
-      }
+      { "pattern": ".git", "with": "git" },
+      { "pattern": ".gitignore", "with": "git" },
+      { "pattern": "package", "with": "npm" },
+      { "pattern": "package-lock", "with": "npm" }
     ],
     "withFileWorkspacePath": true,
     "withGuessedAction": true
