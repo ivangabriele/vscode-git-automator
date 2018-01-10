@@ -49,6 +49,7 @@ Here is a sample :
     "withGuessedAction": true
   }
 }
+```
 
 Please check the `Settings` interface in [this file](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/src/types.ts) to see the possible options, examples and notes.
 
