@@ -59,3 +59,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Fix Git warnings considered as errors
+
+## [1.2.1] - 2018-01-10
+
+### Changed
+- Remove background of icon
