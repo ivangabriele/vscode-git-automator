@@ -39,6 +39,10 @@
 
 Please report any issue or comment [here](https://github.com/ivangabriele/vscode-git-add-and-commit/issues).
 
+## Release Notes
+
+Please check the [changelog file](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/CHANGELOG.md).
+
 ## Contribute
 
 To be able to contribute to TFS development, you need to be at ease with **Typescript** and **Git** usage.
