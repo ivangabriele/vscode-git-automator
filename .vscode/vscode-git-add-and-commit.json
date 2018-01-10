@@ -1,0 +1,13 @@
+{
+  "prefillCommitMessage": {
+    "ignoreFileExtension": true,
+    "replacePatternWith": [
+      {
+        "pattern": "package",
+        "with": "npm"
+      }
+    ],
+    "withFileWorkspacePath": true,
+    "withGuessedAction": true
+  }
+}
