@@ -38,6 +38,8 @@ Here is a sample :
 ```json
 {
   "prefillCommitMessage": {
+    "disableOptionalMessages": true,
+    "forceLowerCase": true,
     "ignoreFileExtension": true,
     "replacePatternWith": [
       {
