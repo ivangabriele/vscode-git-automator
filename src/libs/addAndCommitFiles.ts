@@ -82,6 +82,11 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
     }
   }
 
+  // Force the commit message into lower case
+  if (settings.prefillCommitMessage.forceLowerCase) {
+    commitMessage = commitMessage.toLocaleLowerCase()
+  }
+
   commitMessage = replaceStringWith(commitMessage, settings.prefillCommitMessage.replacePatternWith)
 
   // Prompt user for the commit message
