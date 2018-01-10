@@ -21,6 +21,15 @@ export interface Settings {
   prefillCommitMessage?: {
     /*
       @description
+      Force all character in the prefilled commit message to be in lower case.
+
+      @example
+      "README: " => "readme: "
+    */
+    forceLowerCase?: boolean
+
+    /*
+      @description
       Ignore the file extension in the commit message.
 
       @example
