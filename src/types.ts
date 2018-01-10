@@ -1,11 +1,19 @@
+export type FileGitState = 'ADDED' | 'DELETED' | 'MODIFIED' | 'RENAMED'
+
 export interface GitStatusFile {
   oldPath?: string
   path: string
-  state: 'ADDED' | 'DELETED' | 'MODIFIED' | 'RENAMED'
+  state: FileGitState
 }
 
 export interface SettingsPattern {
   pattern: string
+  with: string
+}
+
+export interface GuessCustomAction {
+  pattern: string
+  state: FileGitState
   with: string
 }
 
@@ -85,9 +93,23 @@ export interface Settings {
       - If a single file or directory has been deleted (for Git), it will add "remove" to the commit message.
 
       @note
-      - Only useful when the `withFileWorkspacePath` setting is TRUE.
-      - This option only works when one file has been or one directory has been created or deleted.
+      - This option only works when one file or one directory has been created, moved/renamed, or deleted.
     */
     withGuessedAction?: boolean
+
+    /*
+      @description
+      Add a custom action for any prefilled commit matching a pattern and Git action.
+      The `action` can be any one of: "ADDED", "DELETED", "MODIFIED", "RENAMED"
+
+      @see
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
+      @description
+      - [{ "pattern": "README.md", "action": "MODIFIED", "with": "update" }]
+        will prefill the commit message of any update on an existing README.md file like this:
+        "package.json: update".
+    */
+    withGuessedCustomActions: GuessCustomAction[]
   }
 }
