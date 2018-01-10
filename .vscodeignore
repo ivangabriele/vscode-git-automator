@@ -1,6 +1,7 @@
 .vscode/**
 .vscode-test/**
 out/**/*.map
+res/*.xcf
 src/**
 
 .gitignore
