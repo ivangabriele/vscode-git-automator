@@ -34,6 +34,23 @@ export default {
         },
         "withGuessedAction": {
           "type": "boolean"
+        },
+        "withGuessedCustomActions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "minLength": 1
+              },
+              "state": {
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
+              },
+              "with": {
+                "type": "string"
+              }
+            }
         }
       },
     }
