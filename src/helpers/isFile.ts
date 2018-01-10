@@ -9,8 +9,6 @@ export default function(fileAbsolutePath: string): boolean {
     return false
   }
   catch (err) {
-    console.error(err)
-
     return false
   }
 }
