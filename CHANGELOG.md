@@ -62,8 +62,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [1.2.2] - 2018-01-10
 
-### Changed
-- Remove double quotes from Git commit messages
+_Please do **NOT** use this release._
 
 ## [1.3.0] - 2018-01-10
 
@@ -72,3 +71,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Update readme
+
+## [1.3.1] - 2018-01-10
+
+### Fixed
+- Fix status bar message
+- Fix unnecessary double quotes in commit message
