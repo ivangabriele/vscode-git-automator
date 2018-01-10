@@ -109,6 +109,9 @@ export interface Settings {
       - [{ "pattern": "README.md", "action": "MODIFIED", "with": "update" }]
         will prefill the commit message of any update on an existing README.md file like this:
         "package.json: update".
+
+      @note
+      - This option can override the `withGuessedAction` since it will be executed afterwards.
     */
     withGuessedCustomActions: GuessCustomAction[]
   }
