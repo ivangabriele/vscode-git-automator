@@ -1,0 +1,75 @@
+{
+  "name": "vscode-git-add-and-commit",
+  "version": "1.0.0",
+  "displayName": "Git Add & Commit",
+  "description": "Add and commit files in one shortcut.",
+  "main": "./out/extension",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.addAndCommitAllFiles",
+    "onCommand:extension.addAndCommitCurrentFile"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.addAndCommitAllFiles",
+        "title": "Add & Commit All Files"
+      },
+      {
+        "command": "extension.addAndCommitCurrentFile",
+        "title": "Add & Commit Current File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.addAndCommitAllFiles",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shit+a"
+      },
+      {
+        "command": "extension.addAndCommitCurrentFile",
+        "key": "ctrl+shift+z",
+        "mac": "cmd+shit+z"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.43",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6"
+  },
+  "author": {
+    "name": "Ivan Gabriele",
+    "email": "ivan.gabriele@gmail.com",
+    "url": "http://www.ivangabriele.com"
+  },
+  "publisher": "ivangabriele",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "addon",
+    "extension",
+    "git",
+    "shortcut",
+    "vsc",
+    "vscode"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangabriele/vscode-git-add-and-commit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivangabriele/vscode-git-add-and-commit/issues"
+  },
+  "homepage": "https://github.com/ivangabriele/vscode-git-add-and-commit#readme"
+}
