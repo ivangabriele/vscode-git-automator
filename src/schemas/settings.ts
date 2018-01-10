@@ -5,6 +5,9 @@ export default {
     "prefillCommitMessage": {
       "type": "object",
       "properties": {
+        "disableOptionalMessages": {
+          "type": "boolean"
+        },
         "forceLowerCase": {
           "type": "boolean"
         },
