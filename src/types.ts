@@ -27,13 +27,14 @@ export interface Settings {
       "res/icon.png: " => "res/icon: "
 
       @note
-      - Only useful when the `prefillWithFileWorkspacePath` setting is TRUE.
+      - Only useful when the `withFileWorkspacePath` setting is TRUE.
     */
     ignoreFileExtension?: boolean
 
     /*
       @description
-      Replace the commit message via a pattern.
+      Replace the commit message via a pattern. These replacements are executed after everything else,
+      BUT before your own edit (in the prompt field).
 
       @see
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
@@ -45,10 +46,8 @@ export interface Settings {
         will replace the commit message like this "package-lock.json: " => "npm: ".
 
       @note
-      - If you use a regex, you need the `with` string MUST start AND end with "/".
-        You can't add modifiers.
-      - Only useful when the `prefillWithFileWorkspacePath` setting is TRUE.
-      - If `ignoreFileExtension` setting is TRUE, you still need to specify the extension here.
+      - If you use a regex, you need the `with` string MUST start AND end with "/". You can't add modifiers.
+      - Only useful when the `withFileWorkspacePath` setting is TRUE.
     */
     replacePatternWith?: SettingsPattern[]
 
@@ -67,11 +66,11 @@ export interface Settings {
 
       @description
       - If the file has been added (for Git), it will add "create" to the commit message.
-      - If the file has been renamed (for Git), it will add "rename" or "move" to the commit message.
+      - If the file has been renamed (for Git), it will add "move" to the commit message.
       - If the file has been deleted (for Git), it will add "remove" to the commit message.
 
       @note
-      - Only useful when the `prefillWithFileWorkspacePath` setting is TRUE.
+      - Only useful when the `withFileWorkspacePath` setting is TRUE.
       - This option only works when one file has been or one directory has been created or deleted.
     */
     withGuessedAction?: boolean
