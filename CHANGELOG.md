@@ -78,7 +78,10 @@ _Please do **NOT** use this release._
 - Fix status bar message
 - Fix unnecessary double quotes in commit message
 
-## [1.3.2] - 2018-01-10
+## [1.4.0] - 2018-01-11
+
+### Added
+- Add a `withGuessedCustomActions` setting to prefill the commit message for certain file - action associations
 
 ### Changed
 - Update readme
