@@ -5,7 +5,10 @@ export default {
     "prefillCommitMessage": {
       "type": "object",
       "properties": {
-        "prefillCommitMessage": {
+        "forceLowerCase": {
+          "type": "boolean"
+        },
+        "ignoreFileExtension": {
           "type": "boolean"
         },
         "replacePatternWith": {
