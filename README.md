@@ -73,6 +73,6 @@ To be able to contribute to TFS development, you need to be at ease with **Types
 
 #### Links
 
-- [TFS extension on Github](https://github.com/ivangabriele/vscode-git-add-and-commit)
-- [TFS extension on Visual Studio Market Place](https://marketplace.visualstudio.com/items/ivangabriele.vscode-git-add-and-commit)
+- [Git Add & Commit extension on Github](https://github.com/ivangabriele/vscode-git-add-and-commit)
+- [Git Add & Commit extension on Visual Studio Market Place](https://marketplace.visualstudio.com/items/ivangabriele.vscode-git-add-and-commit)
 - [MIT Licence](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/LICENCE)
