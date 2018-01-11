@@ -11,10 +11,13 @@ import SettingsSchema from '../schemas/settings'
 
 const SETTINGS_DEFAULT: Settings = {
   prefillCommitMessage: {
+    disableOptionalMessages: false,
+    forceLowerCase: false,
     ignoreFileExtension: false,
     replacePatternWith: [],
     withFileWorkspacePath: false,
     withGuessedAction: false,
+    withGuessedCustomActions: [],
   }
 }
 
