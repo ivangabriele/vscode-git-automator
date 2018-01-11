@@ -39,16 +39,23 @@ Here is a sample :
 {
   "prefillCommitMessage": {
     "disableOptionalMessages": true,
-    "forceLowerCase": true,
+    "forceLowerCase": false,
     "ignoreFileExtension": true,
     "replacePatternWith": [
       {
-        "pattern": "package",
+        "pattern": "package.json",
         "with": "npm"
       }
     ],
     "withFileWorkspacePath": true,
-    "withGuessedAction": true
+    "withGuessedAction": true,
+    "withGuessedCustomActions": [
+      {
+        "action": "update",
+        "pattern": "README",
+        "state": "MODIFIED"
+      }
+    ]
   }
 }
 ```
