@@ -1,13 +1,15 @@
-export default function(filesPaths: string[]): string {
+import { GitStatusFile } from '../types'
+
+export default function(gitStatusFiles: GitStatusFile[]): string {
   let commonPath
 
-  filesPaths.forEach((filePath, index) => {
-    if (index === 0) return commonPath = filePath
+  gitStatusFiles.forEach((gitStatusFile, index) => {
+    if (index === 0) return commonPath = gitStatusFile.path
     if (commonPath.length === 0) return
 
     let length = commonPath.length + 1
     while (--length > 0) {
-      if (filePath.substr(0, length) === commonPath.substr(0, length)) break
+      if (gitStatusFile.path.substr(0, length) === commonPath.substr(0, length)) break
     }
 
     if (length === 0) return
