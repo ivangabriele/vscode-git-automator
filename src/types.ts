@@ -112,6 +112,6 @@ export interface Settings {
       @note
       - This option can override the `withGuessedAction` since it will be executed afterwards.
     */
-    withGuessedCustomActions: GuessCustomAction[]
+    withGuessedCustomActions?: GuessCustomAction[]
   }
 }
