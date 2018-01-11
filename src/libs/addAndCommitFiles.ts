@@ -55,7 +55,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
 
   // If nothing was added (by Git)
   if (gitStatusFiles.length === 0) {
-    showOptionalMessage(`Nothing to commit, working tree clean.`, settings, true)
+    showOptionalMessage(`Nothing to commit, did you save your changes ?.`, settings, true)
 
     return
   }
