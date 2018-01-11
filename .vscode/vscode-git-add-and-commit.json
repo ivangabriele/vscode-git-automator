@@ -16,24 +16,24 @@
     "withGuessedAction": true,
     "withGuessedCustomActions": [
       {
+        "action": "update",
         "pattern": ".vscode/vscode-git-add-and-commit",
-        "state": "MODIFIED",
-        "with": ".vscode/vscode-git-add-and-commit: update"
+        "state": "MODIFIED"
       },
       {
+        "action": "update",
         "pattern": "CHANGELOG",
-        "state": "MODIFIED",
-        "with": "CHANGELOG: update"
+        "state": "MODIFIED"
       },
       {
+        "action": "update",
         "pattern": "LICENSE",
-        "state": "MODIFIED",
-        "with": "LICENSE: update"
+        "state": "MODIFIED"
       },
       {
+        "action": "update",
         "pattern": "README",
-        "state": "MODIFIED",
-        "with": "README: update"
+        "state": "MODIFIED"
       }
     ]
   }
