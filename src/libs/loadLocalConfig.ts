@@ -47,20 +47,22 @@ export default function(workspaceRootAbsolutePath: string): Settings {
     return SETTINGS_DEFAULT
   }
 
-  const rawSettings = mergeDeepLeft(settings, SETTINGS_DEFAULT)
+  const normalizedSettings = mergeDeepLeft(settings, SETTINGS_DEFAULT)
 
-  rawSettings.prefillCommitMessage.replacePatternWith =
-    rawSettings.prefillCommitMessage.replacePatternWith
+  normalizedSettings.prefillCommitMessage.replacePatternWith =
+    normalizedSettings.prefillCommitMessage.replacePatternWith
       .map(settingsPattern => ({
         pattern: normalizePattern(settingsPattern.pattern as string),
         with: settingsPattern.with
       }))
 
-  rawSettings.prefillCommitMessage.withGuessedCustomActions =
-    rawSettings.prefillCommitMessage.withGuessedCustomActions
+  normalizedSettings.prefillCommitMessage.withGuessedCustomActions =
+    normalizedSettings.prefillCommitMessage.withGuessedCustomActions
       .map(settingsPattern => ({
+        action: settingsPattern.action,
         pattern: normalizePattern(settingsPattern.pattern as string),
-        state: settingsPattern.state,
-        with: settingsPattern.with
+        state: settingsPattern.state
       }))
+
+  return normalizedSettings
 }
