@@ -40,15 +40,15 @@ export default {
           "items": {
             "type": "object",
             "properties": {
+              "action": {
+                "type": "string",
+              },
               "pattern": {
                 "type": "string",
                 "minLength": 1,
               },
               "state": {
                 "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"],
-              },
-              "with": {
-                "type": "string",
               },
             },
           },
