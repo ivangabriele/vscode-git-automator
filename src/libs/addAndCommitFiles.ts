@@ -53,6 +53,14 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
 
   const gitStatusFiles = await getGitStatusFiles()
 
+  // If nothing was added (by Git)
+  if (gitStatusFiles.length === 0) {
+    showOptionalMessage(`Nothing to commit, working tree clean.`, settings, true)
+
+    return
+  }
+
+  // Prepare the common path that may be used to prefill the commit message
   if (gitStatusFiles.length === 1) {
     commonFilePath = gitStatusFiles[0].path
   } else {
