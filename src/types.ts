@@ -7,12 +7,12 @@ export interface GitStatusFile {
 }
 
 export interface SettingsPattern {
-  pattern: string
+  pattern: RegExp | string
   with: string
 }
 
 export interface GuessCustomAction {
-  pattern: string
+  pattern: RegExp | string
   state: FileGitState
   with: string
 }
