@@ -5,8 +5,9 @@ import { validate as schemaValidate } from 'jsonschema'
 import * as vscode from 'vscode'
 
 import isFile from '../helpers/isFile'
+import normalizePattern from '../helpers/normalizePattern'
 
-import { Settings } from '../types'
+import { GuessCustomAction, Settings, SettingsPattern } from '../types'
 import SettingsSchema from '../schemas/settings'
 
 const SETTINGS_DEFAULT: Settings = {
@@ -46,5 +47,20 @@ export default function(workspaceRootAbsolutePath: string): Settings {
     return SETTINGS_DEFAULT
   }
 
-  return mergeDeepLeft(settings, SETTINGS_DEFAULT)
+  const rawSettings = mergeDeepLeft(settings, SETTINGS_DEFAULT)
+
+  rawSettings.prefillCommitMessage.replacePatternWith =
+    rawSettings.prefillCommitMessage.replacePatternWith
+      .map(settingsPattern => ({
+        pattern: normalizePattern(settingsPattern.pattern as string),
+        with: settingsPattern.with
+      }))
+
+  rawSettings.prefillCommitMessage.withGuessedCustomActions =
+    rawSettings.prefillCommitMessage.withGuessedCustomActions
+      .map(settingsPattern => ({
+        pattern: normalizePattern(settingsPattern.pattern as string),
+        state: settingsPattern.state,
+        with: settingsPattern.with
+      }))
 }
