@@ -10,7 +10,7 @@
       { "pattern": "package", "with": "npm" },
       { "pattern": "LICENSE", "with": "license" },
       { "pattern": "README", "with": "readme" },
-      { "pattern": "src", "with": "" }
+      { "pattern": "src/", "with": "" }
     ],
     "withFileWorkspacePath": true,
     "withGuessedAction": true
