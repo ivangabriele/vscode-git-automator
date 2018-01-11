@@ -6,13 +6,13 @@ export default {
       "type": "object",
       "properties": {
         "disableOptionalMessages": {
-          "type": "boolean"
+          "type": "boolean",
         },
         "forceLowerCase": {
-          "type": "boolean"
+          "type": "boolean",
         },
         "ignoreFileExtension": {
-          "type": "boolean"
+          "type": "boolean",
         },
         "replacePatternWith": {
           "type": "array",
@@ -25,15 +25,15 @@ export default {
               },
               "with": {
                 "type": "string"
-              }
-            }
-          }
+              },
+            },
+          },
         },
         "withFileWorkspacePath": {
-          "type": "boolean"
+          "type": "boolean",
         },
         "withGuessedAction": {
-          "type": "boolean"
+          "type": "boolean",
         },
         "withGuessedCustomActions": {
           "type": "array",
@@ -42,17 +42,18 @@ export default {
             "properties": {
               "pattern": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
               },
               "state": {
-                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"],
               },
               "with": {
-                "type": "string"
-              }
-            }
-        }
+                "type": "string",
+              },
+            },
+          },
+        },
       },
-    }
-  }
+    },
+  },
 }
