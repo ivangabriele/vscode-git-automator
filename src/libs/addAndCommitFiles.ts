@@ -2,6 +2,7 @@ import * as vscode from 'vscode'
 
 import cancelAdd from './cancelAdd'
 import changeDirectory from '../helpers/changeDirectory'
+import getCommonPathOfGitFiles from '../helpers/getCommonPathOfGitFiles'
 import getGitStatusFiles from '../helpers/getGitStatusFiles'
 import gitAdd from '../helpers/gitAdd'
 import gitCommit from '../helpers/gitCommit'
@@ -46,14 +47,21 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
   // ----------------------------------
   // COMMIT MESSAGE
 
-  const gitStatusFiles = await getGitStatusFiles()
 
   let commitMessage = ''
-  const firstGitStatusFile = gitStatusFiles[0]
+  let commonFilePath: string
+
+  const gitStatusFiles = await getGitStatusFiles()
+
+  if (gitStatusFiles.length === 1) {
+    commonFilePath = gitStatusFiles[0].path
+  } else {
+    commonFilePath = getCommonPathOfGitFiles(gitStatusFiles)
+  }
 
   // Prefill the commit message with file path
   if (gitStatusFiles.length === 1 && settings.prefillCommitMessage.withFileWorkspacePath) {
-    commitMessage += firstGitStatusFile.path + ': '
+    commitMessage += commonFilePath + ': '
 
     if (settings.prefillCommitMessage.ignoreFileExtension) {
       const matches = commitMessage.match(/[^\/](\.\w+):/)
@@ -65,7 +73,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
 
   // Prefill the commit message with the guessed action
   if (gitStatusFiles.length === 1 && settings.prefillCommitMessage.withGuessedAction) {
-    switch (firstGitStatusFile.state) {
+    switch (gitStatusFiles[0].state) {
       case 'ADDED':
         commitMessage += 'create'
         break
