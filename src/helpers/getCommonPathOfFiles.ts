@@ -1,4 +1,4 @@
-export default function(...filesPaths: string[]): string {
+export default function(filesPaths: string[]): string {
   let commonPath
 
   filesPaths.forEach((filePath, index) => {
