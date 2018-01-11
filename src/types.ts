@@ -12,9 +12,9 @@ export interface SettingsPattern {
 }
 
 export interface GuessCustomAction {
+  action: string
   pattern: RegExp | string
   state: FileGitState
-  with: string
 }
 
 export interface Settings {
