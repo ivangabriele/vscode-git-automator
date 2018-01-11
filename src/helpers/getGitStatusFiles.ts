@@ -28,8 +28,11 @@ export default async function(): Promise<GitStatusFile[]> {
     console.error(err)
   }
 
-  return gitStatusStdOut.match(/[^\r\n]+/g)
-    .reduce((linesPartial: GitStatusFile[], line: string) => {
+  const matches = gitStatusStdOut.match(/[^\r\n]+/g)
+
+  return matches === null
+    ? []
+    : matches.reduce((linesPartial: GitStatusFile[], line: string) => {
       if (line.length === 0) return linesPartial
 
       const reg = line[0] === 'R' ? /^(\w)\s+(.*)(?=\s->\s|$)(\s->\s)(.*)/ : /^(\w)\s+(.*)/
