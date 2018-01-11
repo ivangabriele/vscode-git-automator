@@ -84,4 +84,5 @@ _Please do **NOT** use this release._
 - Add a `withGuessedCustomActions` setting to prefill the commit message for certain file - action associations
 
 ### Changed
+- Improve the multiple files commit auto-prefill by checking the possible common path
 - Update readme
