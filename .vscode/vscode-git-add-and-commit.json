@@ -13,6 +13,28 @@
       { "pattern": "src/", "with": "" }
     ],
     "withFileWorkspacePath": true,
-    "withGuessedAction": true
+    "withGuessedAction": true,
+    "withGuessedCustomActions": [
+      {
+        "pattern": ".vscode/vscode-git-add-and-commit",
+        "state": "MODIFIED",
+        "with": ".vscode/vscode-git-add-and-commit: update"
+      },
+      {
+        "pattern": "CHANGELOG",
+        "state": "MODIFIED",
+        "with": "CHANGELOG: update"
+      },
+      {
+        "pattern": "LICENSE",
+        "state": "MODIFIED",
+        "with": "LICENSE: update"
+      },
+      {
+        "pattern": "README",
+        "state": "MODIFIED",
+        "with": "README: update"
+      }
+    ]
   }
 }
