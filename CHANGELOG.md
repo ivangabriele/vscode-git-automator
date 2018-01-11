@@ -86,3 +86,6 @@ _Please do **NOT** use this release._
 ### Changed
 - Improve the multiple files commit auto-prefill by checking the possible common path
 - Update readme
+
+### Fixed
+- Handle empty Git status case (nothing added)
