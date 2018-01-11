@@ -58,9 +58,6 @@ export interface Settings {
       Replace the commit message via a pattern. These replacements are executed after everything else,
       BUT before your own edit (in the prompt field).
 
-      @see
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-
       @example
       - [{ "pattern": "package.json", "with": "npm" }]
         will replace the commit message like this "package.json: " => "npm: ".
@@ -70,6 +67,7 @@ export interface Settings {
       @note
       - If you use a regex, you need the `with` string MUST start AND end with "/". You can't add modifiers.
       - Only useful when the `withFileWorkspacePath` setting is TRUE.
+      - This option is run after everything else, so take that into account for your patterns.
     */
     replacePatternWith?: SettingsPattern[]
 
@@ -98,19 +96,18 @@ export interface Settings {
 
     /*
       @description
-      Add a custom action for any prefilled commit matching a pattern and Git action.
-      The `action` can be any one of: "ADDED", "DELETED", "MODIFIED", "RENAMED"
-
-      @see
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+      Add a custom action for any prefilled commit matching a pattern and Git state.
+      The `state` can be any one of: "ADDED", "DELETED", "MODIFIED", "RENAMED"
 
       @description
-      - [{ "pattern": "README.md", "action": "MODIFIED", "with": "update" }]
+      - [{ "action": "update", "pattern": "README", "action": "MODIFIED" }]
         will prefill the commit message of any update on an existing README.md file like this:
-        "package.json: update".
+        "README: update".
 
       @note
-      - This option can override the `withGuessedAction` since it will be executed afterwards.
+      - If you use a regex, you need the `with` string MUST start AND end with "/". You can't add modifiers.
+      - This option can override the `withGuessedAction`.
+      - This option is run just before the `replacePatternWith`, so take that into account for your patterns.
     */
     withGuessedCustomActions?: GuessCustomAction[]
   }
