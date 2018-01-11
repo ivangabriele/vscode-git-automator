@@ -34,5 +34,5 @@ export default function(commitMessage: string, state, customActions: GuessCustom
     return commitMessage
   }
 
-  return commitMessage += customAction.with
+  return commitMessage += customAction.action
 }
