@@ -1,7 +1,7 @@
 {
   "prefillCommitMessage": {
     "disableOptionalMessages": true,
-    "forceLowerCase": true,
+    "forceLowerCase": false,
     "ignoreFileExtension": true,
     "replacePatternWith": [
       { "pattern": ".git", "with": "git" },
