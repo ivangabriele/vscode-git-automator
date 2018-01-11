@@ -5,9 +5,12 @@
     "ignoreFileExtension": true,
     "replacePatternWith": [
       { "pattern": ".git", "with": "git" },
-      { "pattern": ".gitignore", "with": "git" },
+      { "pattern": ".gitignore: ", "with": "git: ignore " },
+      { "pattern": "CHANGELOG", "with": "changelog" },
       { "pattern": "package", "with": "npm" },
-      { "pattern": "package-lock", "with": "npm" }
+      { "pattern": "LICENSE", "with": "license" },
+      { "pattern": "README", "with": "readme" },
+      { "pattern": "src", "with": "" }
     ],
     "withFileWorkspacePath": true,
     "withGuessedAction": true
