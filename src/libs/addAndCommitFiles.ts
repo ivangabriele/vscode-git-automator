@@ -6,6 +6,7 @@ import getCommonPathOfGitFiles from '../helpers/getCommonPathOfGitFiles'
 import getGitStatusFiles from '../helpers/getGitStatusFiles'
 import gitAdd from '../helpers/gitAdd'
 import gitCommit from '../helpers/gitCommit'
+import guessAction from '../helpers/guessAction'
 import replaceStringWith from '../helpers/replaceStringWith'
 import showOptionalMessage from '../helpers/showOptionalMessage'
 import validateCommitMessage from '../helpers/validateCommitMessage'
@@ -79,29 +80,18 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
     }
   }
 
-  // Prefill the commit message with the guessed action
-  if (gitStatusFiles.length === 1 && settings.prefillCommitMessage.withGuessedAction) {
-    switch (gitStatusFiles[0].state) {
-      case 'ADDED':
-        commitMessage += 'create'
-        break
-
-      case 'DELETED':
-        commitMessage += 'remove'
-        break
-
-      case 'RENAMED':
-        commitMessage += 'move'
-        break
-
-      default:
-        break
-    }
-  }
-
   // Force the commit message into lower case
   if (settings.prefillCommitMessage.forceLowerCase) {
     commitMessage = commitMessage.toLocaleLowerCase()
+  }
+
+  // Prefill the commit message with the guessed action
+  if (gitStatusFiles.length === 1) {
+    commitMessage = guessAction(
+      commitMessage,
+      gitStatusFiles[0].state,
+      settings.prefillCommitMessage.withGuessedCustomActions
+    )
   }
 
   commitMessage = replaceStringWith(commitMessage, settings.prefillCommitMessage.replacePatternWith)
