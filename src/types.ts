@@ -22,7 +22,6 @@ export interface Settings {
     Commit message prefill settings
 
     @note
-    - Most of these options will only work when only one file is added and committed.
     - These options will only be applied to the prefill part
       and won't impact any of your own commit message edit.
   */
