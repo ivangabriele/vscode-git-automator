@@ -13,14 +13,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add git add & commit current file command
 - Add git reset fallback on cancel or errors
 
-## [1.0.0] - 2018-01-09
-
-### Added
-- Initial release
-- Add git add & commit all edited files command
-- Add git add & commit current file command
-- Add git reset fallback on cancel or errors
-
 ## [1.1.0] - 2018-01-10
 
 ### Added
