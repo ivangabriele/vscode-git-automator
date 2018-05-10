@@ -90,7 +90,15 @@ _Please do **NOT** use this release._
 ### Fixed
 - Handle empty Git status case (nothing added)
 
-## [1.3.1] - 2018-01-11
+## [1.4.1] - 2018-01-11
 
 ### Changed
 - Update readme
+
+## [1.4.2] - 2018-05-10
+
+### Fixed
+- Fix MacOS shorcuts
+
+### Changed
+- Update dependencies
