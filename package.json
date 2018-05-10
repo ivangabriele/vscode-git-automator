@@ -27,12 +27,12 @@
       {
         "command": "extension.addAndCommitAllFiles",
         "key": "ctrl+shift+a",
-        "mac": "cmd+shit+a"
+        "mac": "cmd+shift+a"
       },
       {
         "command": "extension.addAndCommitCurrentFile",
         "key": "ctrl+shift+z",
-        "mac": "cmd+shit+z"
+        "mac": "cmd+shift+z"
       }
     ]
   },
