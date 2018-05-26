@@ -34,7 +34,102 @@
         "key": "ctrl+shift+z",
         "mac": "cmd+shift+z"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Git Add & Commit configuration",
+      "properties": {
+        "gaac.disableOptionalMessages": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show 'optional' warning and info messages in the status bar instead of the top modals."
+        },
+        "gaac.forceLowerCase": {
+          "type": "boolean",
+          "default": false,
+          "description": "Force all character in the prefilled commit message to be in lower case. Only works when 'gaac.withFileWorkspacePath' is TRUE. Output: 'README: ' => 'readme: '."
+        },
+        "gaac.ignoreFileExtension": {
+          "type": "boolean",
+          "default": true,
+          "description": "Ignore the file extension in the commit message. Output: 'res/icon.png: ' => 'res/icon: '."
+        },
+        "gaac.replacePatternWith": {
+          "type": "array",
+          "default": [
+            { "pattern": ".gitignore: ", "with": "git: ignore " },
+            { "pattern": ".git", "with": "git" },
+            { "pattern": "CHANGELOG", "with": "changelog" },
+            { "pattern": "LICENSE", "with": "license" },
+            { "pattern": "package", "with": "npm" },
+            { "pattern": "README", "with": "readme" },
+            { "pattern": "src/", "with": "" }
+          ],
+          "description": "Replace the commit message via a pattern (the pattern can be a string or a regex string). These replacements are executed after everything else, BUT before your own edit (in the prompt field). Example: [{ \"pattern\": \"/^package[^\\.]*\\.jso?n?/\", \"with\": \"npm\" }] will replace the prefilled commit message like: 'package-lock.json: ' => 'npm: '.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string"
+              },
+              "pattern": {
+                "type": "string",
+                "minLength": 1
+              },
+              "state": {
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
+              }
+            }
+          }
+        },
+        "gaac.withFileWorkspacePath": {
+          "type": "boolean",
+          "default": true,
+          "description": "Prefill the commit message with the workspace relative file path, followed by ': '."
+        },
+        "gaac.withGuessedAction": {
+          "type": "boolean",
+          "default": true,
+          "description": "Try to guess the action when it's obvious and add it to the prefilled commit message."
+        },
+        "gaac.withGuessedCustomActions": {
+          "type": "array",
+          "default": [
+            {
+              "action": "update",
+              "pattern": "CHANGELOG",
+              "state": "MODIFIED"
+            },
+            {
+              "action": "update",
+              "pattern": "LICENSE",
+              "state": "MODIFIED"
+            },
+            {
+              "action": "update",
+              "pattern": "README",
+              "state": "MODIFIED"
+            }
+          ],
+          "description": "Add a custom action for any prefilled commit matching a pattern and Git state. The `state` can be any one of: 'ADDED', 'DELETED', 'MODIFIED', 'RENAMED'.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string"
+              },
+              "pattern": {
+                "type": "string",
+                "minLength": 1
+              },
+              "state": {
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
+              }
+            }
+          }
+        }
+      }
+    }
   },
   "scripts": {
     "compile": "tsc -p ./",
