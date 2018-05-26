@@ -1,6 +1,6 @@
 {
   "name": "vscode-git-add-and-commit",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "displayName": "Git Add & Commit",
   "description": "Add and commit files in one shortcut.",
   "main": "./out/extension",
@@ -57,13 +57,34 @@
         "gaac.replacePatternWith": {
           "type": "array",
           "default": [
-            { "pattern": ".gitignore: ", "with": "git: ignore " },
-            { "pattern": ".git", "with": "git" },
-            { "pattern": "CHANGELOG", "with": "changelog" },
-            { "pattern": "LICENSE", "with": "license" },
-            { "pattern": "package", "with": "npm" },
-            { "pattern": "README", "with": "readme" },
-            { "pattern": "src/", "with": "" }
+            {
+              "pattern": ".gitignore: ",
+              "with": "git: ignore "
+            },
+            {
+              "pattern": ".git",
+              "with": "git"
+            },
+            {
+              "pattern": "CHANGELOG",
+              "with": "changelog"
+            },
+            {
+              "pattern": "LICENSE",
+              "with": "license"
+            },
+            {
+              "pattern": "package",
+              "with": "npm"
+            },
+            {
+              "pattern": "README",
+              "with": "readme"
+            },
+            {
+              "pattern": "src/",
+              "with": ""
+            }
           ],
           "description": "Replace the commit message via a pattern (the pattern can be a string or a regex string). These replacements are executed after everything else, BUT before your own edit (in the prompt field). Example: [{ \"pattern\": \"/^package[^\\.]*\\.jso?n?/\", \"with\": \"npm\" }] will replace the prefilled commit message like: 'package-lock.json: ' => 'npm: '.",
           "items": {
@@ -77,7 +98,12 @@
                 "minLength": 1
               },
               "state": {
-                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
+                "enum": [
+                  "ADDED",
+                  "DELETED",
+                  "MODIFIED",
+                  "RENAMED"
+                ]
               }
             }
           }
@@ -123,7 +149,12 @@
                 "minLength": 1
               },
               "state": {
-                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
+                "enum": [
+                  "ADDED",
+                  "DELETED",
+                  "MODIFIED",
+                  "RENAMED"
+                ]
               }
             }
           }
