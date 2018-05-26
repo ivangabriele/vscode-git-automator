@@ -19,48 +19,21 @@ And yes, I'm lazy !
 
 ### Add all edited files to Git and commit them
 
-1. Hit **Ctrl + Shift + A** (PC) / **Cmd + Shift + A** (Mac)
+1. Hit **Ctrl + Shift + A** (PC) / **Cmd + Shift + A** (Mac).
 2. Enter the commit message.
 3. Press **ENTER**.
 
 ### Add ONLY the current file to Git and commit it
 
-1. Hit **Ctrl + Shift + Z** (PC) / **Cmd + Shift + Z** (Mac)
+1. Hit **Ctrl + Shift + Z** (PC) / **Cmd + Shift + Z** (Mac).
 2. Enter the commit message.
 3. Press **ENTER**.
 
 ### Setup the auto-prefill for commit messages
 
-First, create a `vscode-git-add-and-commit.json` file in your `.vscode` workspace directory.
-
-Here is a sample :
-
-```json
-{
-  "prefillCommitMessage": {
-    "disableOptionalMessages": true,
-    "forceLowerCase": false,
-    "ignoreFileExtension": true,
-    "replacePatternWith": [
-      {
-        "pattern": "package.json",
-        "with": "npm"
-      }
-    ],
-    "withFileWorkspacePath": true,
-    "withGuessedAction": true,
-    "withGuessedCustomActions": [
-      {
-        "action": "update",
-        "pattern": "README",
-        "state": "MODIFIED"
-      }
-    ]
-  }
-}
-```
-
-Please check the `Settings` interface in [this file](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/src/types.ts) to see the possible options, examples and notes.
+1. Hit **Ctrl + Shift + P** (PC) / **Cmd + Shift + P** (Mac).
+2. Look for `Preferences: Open User Settings`.
+3. Look for `gaac.` settings to customize them.
 
 ## Issues
 
