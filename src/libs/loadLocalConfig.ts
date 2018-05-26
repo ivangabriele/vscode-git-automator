@@ -10,22 +10,13 @@ import normalizePattern from '../helpers/normalizePattern'
 import { GuessCustomAction, Settings, SettingsPattern } from '../types'
 import SettingsSchema from '../schemas/settings'
 
-const SETTINGS_DEFAULT: Settings = {
-  prefillCommitMessage: {
-    disableOptionalMessages: false,
-    forceLowerCase: false,
-    ignoreFileExtension: false,
-    replacePatternWith: [],
-    withFileWorkspacePath: false,
-    withGuessedAction: false,
-    withGuessedCustomActions: [],
-  }
-}
-
 export default function(workspaceRootAbsolutePath: string): Settings {
-  const workspaceSettingsAbsolutePath = path.resolve(workspaceRootAbsolutePath, '.vscode', 'vscode-git-add-and-commit.json')
+  const workspaceSettingsAbsolutePath = path
+    .resolve(workspaceRootAbsolutePath, '.vscode', 'vscode-git-add-and-commit.json')
 
-  if (!isFile(workspaceSettingsAbsolutePath)) return SETTINGS_DEFAULT
+  const defaultSettings: Settings = { prefillCommitMessage: vscode.workspace.getConfiguration('gaac') }
+
+  if (!isFile(workspaceSettingsAbsolutePath)) return defaultSettings
 
   let settings: Settings
   try {
@@ -33,21 +24,27 @@ export default function(workspaceRootAbsolutePath: string): Settings {
     settings = JSON.parse(settingsSource)
   }
   catch (err) {
-    vscode.window.showWarningMessage(`Can't load ".vscode/vscode-git-add-and-commit.json". Please check the file content format.`)
+    vscode.window.showWarningMessage(`
+      Can't load ".vscode/vscode-git-add-and-commit.json".
+      Please check the file content format.
+    `)
     console.error(err)
 
-    return SETTINGS_DEFAULT
+    return defaultSettings
   }
 
   const schemaRes = schemaValidate(settings, SettingsSchema)
   if (!schemaRes.valid) {
-    vscode.window.showWarningMessage(`Can't validate ".vscode/vscode-git-add-and-commit.json". Please check the properties.`)
+    vscode.window.showWarningMessage(`
+      Settings validation error. Please check the properties in ".vscode/vscode-git-add-and-commit.json"
+      or remove this file and use your user/workspace settings instead.
+    `)
     schemaRes.errors.forEach(err => console.error(err.message))
 
-    return SETTINGS_DEFAULT
+    return defaultSettings
   }
 
-  const normalizedSettings = mergeDeepLeft(settings, SETTINGS_DEFAULT)
+  const normalizedSettings = mergeDeepLeft(settings, defaultSettings)
 
   normalizedSettings.prefillCommitMessage.replacePatternWith =
     normalizedSettings.prefillCommitMessage.replacePatternWith
