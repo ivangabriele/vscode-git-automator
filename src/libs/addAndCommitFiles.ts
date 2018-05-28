@@ -72,7 +72,15 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
   if (gitStatusFiles.length === 1) {
     commonFilePath = gitStatusFiles[0].path
   } else {
-    commonFilePath = getCommonPathOfGitFiles(gitStatusFiles)
+    try {
+      commonFilePath = getCommonPathOfGitFiles(gitStatusFiles)
+    }
+    catch (err) {
+      vscode.window.showErrorMessage(err)
+      console.error(err)
+
+      return
+    }
   }
 
   // Prefill the commit message with file path
