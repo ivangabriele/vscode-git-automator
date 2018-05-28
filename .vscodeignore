@@ -1,8 +1,12 @@
-.vscode/**
-.vscode-test/**
-out/**/*.map
-res/*.xcf
-src/**
+*
+*/**
+**/.DS_Store
 
-.gitignore
-tsconfig.json
+!out/**/*.js
+
+!CHANGELOG.md
+!LICENSE
+!README.md
+!package-lock.json
+!package.json
+!res/icon.png
