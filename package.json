@@ -166,7 +166,7 @@
     "compile": "tsc -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preversion": "npm compile",
+    "preversion": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
