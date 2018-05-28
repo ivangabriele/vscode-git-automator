@@ -1,7 +1,7 @@
 # Git Add & Commit Extension for Visual Studio Code
 
 - **Add and commit all or current file(s) in one shortcut under VS Code.**
-- **Auto-prefill commit messages.**
+- **Smart auto-prefill for your commit messages.**
 
 And yes, I'm lazy !
 
