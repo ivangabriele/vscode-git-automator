@@ -169,12 +169,9 @@
     "preversion": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
-  "dependencies": {
-    "ramda": "^0.25.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^9.6.18",
-    "@types/ramda": "^0.25.30",
     "typescript": "^2.8.3",
     "vscode": "^1.1.18"
   },
