@@ -58,31 +58,43 @@
           "type": "array",
           "default": [
             {
-              "pattern": ".gitignore: ",
-              "with": "git: ignore "
+              "pattern": "/^.editorconfig/",
+              "with": "editorconfig"
             },
             {
-              "pattern": ".git",
+              "pattern": "/^.gitignore/",
               "with": "git"
             },
             {
-              "pattern": "CHANGELOG",
+              "pattern": "/^.travis/",
+              "with": "travis"
+            },
+            {
+              "pattern": "/^.vscodeignore/",
+              "with": "vscode"
+            },
+            {
+              "pattern": "/^CHANGELOG[^:]*/",
               "with": "changelog"
             },
             {
-              "pattern": "LICENSE",
+              "pattern": "/^LICENSE[^:]*/",
               "with": "license"
             },
             {
-              "pattern": "package",
+              "pattern": "/^(npm-shrinkwrap|.npmignore|package(-lock)?)[^:]*/",
               "with": "npm"
             },
             {
-              "pattern": "README",
+              "pattern": "/^webpack[^:]*/",
+              "with": "webpack"
+            },
+            {
+              "pattern": "/^README[^:]*/",
               "with": "readme"
             },
             {
-              "pattern": "src/",
+              "pattern": "/^src\//",
               "with": ""
             }
           ],
@@ -122,18 +134,23 @@
           "type": "array",
           "default": [
             {
-              "action": "update",
-              "pattern": "CHANGELOG",
+              "action": "ignore",
+              "pattern": "/^.(gitignore|npmignore|vscodeignore)/",
               "state": "MODIFIED"
             },
             {
               "action": "update",
-              "pattern": "LICENSE",
+              "pattern": "/^CHANGELOG/",
               "state": "MODIFIED"
             },
             {
               "action": "update",
-              "pattern": "README",
+              "pattern": "/^LICENSE/",
+              "state": "MODIFIED"
+            },
+            {
+              "action": "update",
+              "pattern": "/^README/",
               "state": "MODIFIED"
             }
           ],
