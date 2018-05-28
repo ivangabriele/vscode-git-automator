@@ -170,7 +170,6 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "await-to-js": "^2.0.1",
     "jsonschema": "^1.2.4",
     "ramda": "^0.25.0"
   },
