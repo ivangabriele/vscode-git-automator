@@ -35,11 +35,16 @@ And yes, I'm lazy !
 2. Look for `Preferences: Open User Settings`.
 3. Look for `gaac.` settings to customize them.
 
-## Issues
+## Roadmap
 
-Please report any issue or comment [here](https://github.com/ivangabriele/vscode-git-add-and-commit/issues).
+* Fix "git add ." common path detection.
+* Multiple files selection.
 
-## Release Notes
+## Issues & Feature Requests
+
+Please report any issue or feature request [there](https://github.com/ivangabriele/vscode-git-add-and-commit/issues).
+
+## Change Log
 
 Please check the [changelog file](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/CHANGELOG.md).
 
