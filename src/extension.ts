@@ -12,12 +12,12 @@ export function activate(context: vscode.ExtensionContext) {
   const settings: Settings = loadLocalConfig(workspaceRootAbsolutePath)
 
   const addAndCommitAllFilesDisposable = vscode.commands.registerCommand(
-    'extension.addAndCommitAllFiles',
+    'extension.vscode-git-add-and-commit.addAndCommitAllFiles',
     () => addAndCommitFiles(['*'], settings)
   )
 
   let addAndCommitCurrentFileDisposable = vscode.commands.registerCommand(
-    'extension.addAndCommitCurrentFile',
+    'extension.vscode-git-add-and-commit.addAndCommitCurrentFile',
     () => addAndCommitFiles([
       path.relative(workspaceRootAbsolutePath, vscode.window.activeTextEditor.document.fileName)
     ], settings)

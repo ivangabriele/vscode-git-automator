@@ -9,28 +9,28 @@
     "vscode": "^1.19.0"
   },
   "activationEvents": [
-    "onCommand:extension.addAndCommitAllFiles",
-    "onCommand:extension.addAndCommitCurrentFile"
+    "onCommand:extension.vscode-git-add-and-commit.addAndCommitAllFiles",
+    "onCommand:extension.vscode-git-add-and-commit.addAndCommitCurrentFile"
   ],
   "contributes": {
     "commands": [
       {
-        "command": "extension.addAndCommitAllFiles",
+        "command": "extension.vscode-git-add-and-commit.addAndCommitAllFiles",
         "title": "Add & Commit All Files"
       },
       {
-        "command": "extension.addAndCommitCurrentFile",
+        "command": "extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
         "title": "Add & Commit Current File"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.addAndCommitAllFiles",
+        "command": "extension.vscode-git-add-and-commit.addAndCommitAllFiles",
         "key": "ctrl+shift+a",
         "mac": "cmd+shift+a"
       },
       {
-        "command": "extension.addAndCommitCurrentFile",
+        "command": "extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
         "key": "ctrl+shift+z",
         "mac": "cmd+shift+z"
       }
