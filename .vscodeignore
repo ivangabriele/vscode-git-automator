@@ -2,12 +2,12 @@
 */**
 **/.DS_Store
 
-!out/*.js
-!out/**/*.js
+!/out/*.js
+!/out/**/*.js
 
-!CHANGELOG.md
-!LICENSE
-!README.md
-!package-lock.json
-!package.json
-!res/icon.png
+!/CHANGELOG.md
+!/LICENSE
+!/README.md
+!/package-lock.json
+!/package.json
+!/res/icon.png
