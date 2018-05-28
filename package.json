@@ -1,6 +1,6 @@
 {
   "name": "vscode-git-add-and-commit",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "displayName": "Git Add & Commit",
   "description": "Add and commit all or current file(s) with smart commit messages, in one shortcut under VS Code.",
   "main": "./out/extension",
@@ -94,7 +94,7 @@
               "with": "readme"
             },
             {
-              "pattern": "/^src\//",
+              "pattern": "/^src//",
               "with": ""
             }
           ],
