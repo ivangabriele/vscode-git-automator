@@ -1,3 +1,4 @@
+import to from 'await-to-js'
 import * as vscode from 'vscode'
 
 import cancelAdd from './cancelAdd'
@@ -52,7 +53,13 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
   let commitMessage = ''
   let commonFilePath: string
 
-  const gitStatusFiles = await getGitStatusFiles()
+  const [err, gitStatusFiles] = await to(getGitStatusFiles())
+  if (err !== null) {
+    vscode.window.showErrorMessage(err)
+    console.error(err)
+
+    return
+  }
 
   // If nothing was added (by Git)
   if (gitStatusFiles.length === 0) {
