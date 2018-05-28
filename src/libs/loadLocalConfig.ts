@@ -3,6 +3,7 @@ import * as path from 'path'
 import * as vscode from 'vscode'
 
 import isFile from '../helpers/isFile'
+import merge from '../helpers/merge'
 import normalizePattern from '../helpers/normalizePattern'
 
 import { GuessCustomAction, Settings, SettingsPattern } from '../types'
@@ -14,21 +15,20 @@ export default function(workspaceRootAbsolutePath: string): Settings {
 
   const defaultSettings: Settings = { prefillCommitMessage: vscode.workspace.getConfiguration('gaac') }
 
-  if (!isFile(workspaceSettingsAbsolutePath)) return defaultSettings
+  let userSettings: Settings = {}
 
-  let settings: Settings
-  try {
-    const settingsSource = fs.readFileSync(workspaceSettingsAbsolutePath, 'utf8')
-    settings = JSON.parse(settingsSource)
-  }
-  catch (err) {
-    vscode.window.showWarningMessage(`
-      Can't load ".vscode/vscode-git-add-and-commit.json".
-      Please check the file content format.
-    `)
-    console.error(err)
-
-    return defaultSettings
+  if (isFile(workspaceSettingsAbsolutePath)) {
+    try {
+      const settingsSource = fs.readFileSync(workspaceSettingsAbsolutePath, 'utf8')
+      userSettings = JSON.parse(settingsSource)
+    }
+    catch (err) {
+      vscode.window.showWarningMessage(`
+        Can't load ".vscode/vscode-git-add-and-commit.json".
+        Please check the file content format.
+      `)
+      console.error(err)
+    }
   }
 
   // const schemaRes = schemaValidate(settings, SettingsSchema)
@@ -42,7 +42,7 @@ export default function(workspaceRootAbsolutePath: string): Settings {
   //   return defaultSettings
   // }
 
-  const normalizedSettings = { ...defaultSettings, ...settings }
+  const normalizedSettings = merge(defaultSettings, userSettings)
 
   normalizedSettings.prefillCommitMessage.replacePatternWith =
     normalizedSettings.prefillCommitMessage.replacePatternWith
