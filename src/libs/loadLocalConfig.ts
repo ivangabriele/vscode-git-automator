@@ -1,7 +1,5 @@
 import * as fs from 'fs'
-import { mergeDeepLeft } from 'ramda'
 import * as path from 'path'
-import { validate as schemaValidate } from 'jsonschema'
 import * as vscode from 'vscode'
 
 import isFile from '../helpers/isFile'
@@ -33,18 +31,18 @@ export default function(workspaceRootAbsolutePath: string): Settings {
     return defaultSettings
   }
 
-  const schemaRes = schemaValidate(settings, SettingsSchema)
-  if (!schemaRes.valid) {
-    vscode.window.showWarningMessage(`
-      Settings validation error. Please check the properties in ".vscode/vscode-git-add-and-commit.json"
-      or remove this file and use your user/workspace settings instead.
-    `)
-    schemaRes.errors.forEach(err => console.error(err.message))
+  // const schemaRes = schemaValidate(settings, SettingsSchema)
+  // if (!schemaRes.valid) {
+  //   vscode.window.showWarningMessage(`
+  //     Settings validation error. Please check the properties in ".vscode/vscode-git-add-and-commit.json"
+  //     or remove this file and use your user/workspace settings instead.
+  //   `)
+  //   schemaRes.errors.forEach(err => console.error(err.message))
 
-    return defaultSettings
-  }
+  //   return defaultSettings
+  // }
 
-  const normalizedSettings = mergeDeepLeft(settings, defaultSettings)
+  const normalizedSettings = { ...defaultSettings, ...settings }
 
   normalizedSettings.prefillCommitMessage.replacePatternWith =
     normalizedSettings.prefillCommitMessage.replacePatternWith
