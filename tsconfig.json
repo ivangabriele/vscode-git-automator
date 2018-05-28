@@ -8,6 +8,6 @@
     "preserveConstEnums": true,
     "rootDir": "src",
     "sourceMap": false,
-    "target": "es5"
+    "target": "es6"
   }
 }
