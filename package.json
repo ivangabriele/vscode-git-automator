@@ -170,11 +170,9 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "jsonschema": "^1.2.4",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
-    "@types/jsonschema": "^1.1.1",
     "@types/node": "^9.6.18",
     "@types/ramda": "^0.25.30",
     "typescript": "^2.8.3",
