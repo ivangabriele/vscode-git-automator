@@ -6,7 +6,7 @@
   "main": "./out/extension",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.19.0"
+    "vscode": "^1.23.1"
   },
   "activationEvents": [
     "onCommand:extension.vscode-git-add-and-commit.addAndCommitAllFiles",
