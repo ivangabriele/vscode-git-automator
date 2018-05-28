@@ -2,6 +2,7 @@
 */**
 **/.DS_Store
 
+!out/*.js
 !out/**/*.js
 
 !CHANGELOG.md
