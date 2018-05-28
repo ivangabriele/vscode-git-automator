@@ -49,26 +49,19 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
   // ----------------------------------
   // COMMIT MESSAGE
 
-
   let commitMessage = ''
   let commonFilePath: string
 
-  const [err, gitStatusFiles] = await to(getGitStatusFiles())
-  if (err !== null) {
-    vscode.window.showErrorMessage(err)
-    console.error(err)
-
-    return
-  }
-
-  // If nothing was added (by Git)
-  if (gitStatusFiles.length === 0) {
-    showOptionalMessage(`Nothing to commit, did you save your changes ?.`, settings, true)
-
-    return
-  }
-
   try {
+    const gitStatusFiles = await getGitStatusFiles()
+
+    // If Git didn't find anything to add
+    if (gitStatusFiles.length === 0) {
+      showOptionalMessage(`Nothing to commit, did you save your changes ?.`, settings, true)
+
+      return
+    }
+
     // Prepare the common path that may be used to prefill the commit message
     if (gitStatusFiles.length === 1) {
       commonFilePath = gitStatusFiles[0].path
