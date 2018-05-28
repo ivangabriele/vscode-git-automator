@@ -5,14 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.5.2] - 2018-05-28
+
+### Fixed
+- Attempt to fix "command 'extension.addAndCommitCurrentFile' not found" error.
+
+
 ## [1.5.1] - 2018-05-28
 
 ### Fixed
-- Apply dependencies security patches
+- Apply dependencies security patches.
 
 ### Changed
-- Improve errors catching
-- Update readme (roadmap)
+- Improve errors catching.
+- Update readme (roadmap).
 
 ## [1.5.0] - 2018-05-26
 
@@ -22,41 +28,41 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.4.2] - 2018-05-10
 
 ### Fixed
-- Fix MacOS key bindings
+- Fix MacOS key bindings.
 
 ### Changed
-- Update dependencies
+- Update dependencies.
 
 ## [1.4.1] - 2018-01-11
 
 ### Changed
-- Update readme
+- Update readme.
 
 ## [1.4.0] - 2018-01-11
 
 ### Added
-- Add a `withGuessedCustomActions` setting to prefill the commit message for certain file - action associations
+- Add a `withGuessedCustomActions` setting to prefill the commit message for certain file - action associations.
 
 ### Changed
-- Improve the multiple files commit auto-prefill by checking the possible common path
-- Update readme
+- Improve the multiple files commit auto-prefill by checking the possible common path.
+- Update readme.
 
 ### Fixed
-- Handle empty Git status case (nothing added)
+- Handle empty Git status case (nothing added).
 
 ## [1.3.1] - 2018-01-10
 
 ### Fixed
-- Fix status bar message
-- Fix unnecessary double quotes in commit message
+- Fix status bar message.
+- Fix unnecessary double quotes in commit message.
 
 ## [1.3.0] - 2018-01-10
 
 ### Added
-- Add a `disableOptionalMessages` setting to move optional messages to the status bar
+- Add a `disableOptionalMessages` setting to move optional messages to the status bar.
 
 ### Changed
-- Update readme
+- Update readme.
 
 ## [1.2.2] - 2018-01-10
 
@@ -65,46 +71,46 @@ _Please do **NOT** use this release._
 ## [1.2.1] - 2018-01-10
 
 ### Changed
-- Remove background of icon
+- Remove background of icon.
 
 ## [1.2.0] - 2018-01-10
 
 ### Added
-- Add commit message auto-prefill feature
+- Add commit message auto-prefill feature.
 
 ### Changed
 - Update readme
 
 ### Fixed
-- Fix Git warnings considered as errors
+- Fix Git warnings considered as errors.
 
 ## [1.1.3] - 2018-01-10
 
 ### Changed
-- Update readme
+- Update readme.
 
 ## [1.1.2] - 2018-01-10
 
 ### Changed
-- Fix Visual Studio Marketplace badge
+- Fix Visual Studio Marketplace badge.
 
 ## [1.1.1] - 2018-01-10
 
 ### Removed
-- Remove a package keyword
+- Remove a package keyword.
 
 ## [1.1.0] - 2018-01-10
 
 ### Added
-- Add extension icon
+- Add extension icon.
 
 ### Changed
-- Upgrade depedencies
+- Upgrade depedencies.
 
 ## [1.0.0] - 2018-01-09
 
 ### Added
-- Initial release
-- Add git add & commit all edited files command
-- Add git add & commit current file command
-- Add git reset fallback on cancel or errors
+- Initial release.
+- Add git add & commit all edited files command.
+- Add git add & commit current file command.
+- Add git reset fallback on cancel or errors.
