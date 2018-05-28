@@ -1,17 +1,16 @@
-import { compose, find, prop, propEq } from 'ramda'
-
 import { FileGitState, GuessCustomAction } from '../types';
 
 export default function(commitMessage: string, state, customActions: GuessCustomAction[]): string {
-  const customAction = find(
+  const customAction = customActions.find(
     ({ pattern: actionPattern, state: actionState }: GuessCustomAction) => {
       if (actionState !== state) return false
 
       return typeof actionPattern === 'string'
         ? commitMessage.includes(actionPattern)
         : actionPattern.test(commitMessage)
-    }
-  )(customActions)
+    },
+    customActions
+  )
 
   if (customAction === undefined) {
     switch (state) {
