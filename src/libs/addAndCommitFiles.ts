@@ -94,6 +94,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
       )
     }
 
+    // Prefill the commit message with settings patterns
     commitMessage = replaceStringWith(commitMessage, settings.prefillCommitMessage.replacePatternWith)
 
     // Prompt user for the commit message
