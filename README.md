@@ -12,7 +12,7 @@ And yes, I'm lazy !
 [![David](https://img.shields.io/david/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
 [![David](https://img.shields.io/david/dev/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
 
-[![NSP Status](https://nodesecurity.io/orgs/ivan-gabriele/projects/06083557-7055-4c2d-a1f0-e9f10c671faf/badge)](https://nodesecurity.io/orgs/ivan-gabriele/projects/06083557-7055-4c2d-a1f0-e9f10c671faf)
+[![NSP Status](https://nodesecurity.io/orgs/ivan-gabriele/projects/60814129-32bf-4883-8f98-0d0bf320dde7/badge)](https://nodesecurity.io/orgs/ivan-gabriele/projects/60814129-32bf-4883-8f98-0d0bf320dde7)
 
 ---
 
