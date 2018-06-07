@@ -78,8 +78,16 @@
               "with": "changelog"
             },
             {
+              "pattern": "/^Godeps[^:]*/",
+              "with": "godep"
+            },
+            {
               "pattern": "/^LICENSE[^:]*/",
               "with": "license"
+            },
+            {
+              "pattern": "/^Makefile[^:]*/i",
+              "with": "makefile"
             },
             {
               "pattern": "/^(npm-shrinkwrap|.npmignore|package(-lock)?)[^:]*/",
