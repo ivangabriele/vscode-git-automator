@@ -21,6 +21,10 @@
       {
         "command": "extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
         "title": "Add & Commit Current File"
+      },
+      {
+        "command": "extension.vscode-git-add-and-commit.pushLocalCommits",
+        "title": "Push Local Commits"
       }
     ],
     "keybindings": [
@@ -33,6 +37,11 @@
         "command": "extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
         "key": "ctrl+shift+z",
         "mac": "cmd+shift+z"
+      },
+      {
+        "command": "extension.vscode-git-add-and-commit.pushLocalCommits",
+        "key": "ctrl+shift+x",
+        "mac": "cmd+shift+x"
       }
     ],
     "configuration": {
