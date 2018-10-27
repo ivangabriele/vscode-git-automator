@@ -6,7 +6,7 @@
   "main": "./out/extension",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.23.1"
+    "vscode": "^1.28.2"
   },
   "activationEvents": [
     "onCommand:extension.vscode-git-add-and-commit.addAndCommitAllFiles",
@@ -196,9 +196,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "^10.3.1",
-    "typescript": "^2.9.1",
-    "vscode": "^1.1.18"
+    "@types/node": "^10.12.0",
+    "typescript": "^3.1.3",
+    "vscode": "^1.1.21"
   },
   "author": {
     "name": "Ivan Gabriele",
