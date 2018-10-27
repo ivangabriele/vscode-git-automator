@@ -3,6 +3,7 @@ import * as path from 'path'
 
 import addAndCommitFiles from './libs/addAndCommitFiles'
 import loadLocalConfig from './libs/loadLocalConfig'
+import pushLocalCommits from './libs/pushLocalCommits'
 
 import { Settings } from './types'
 
@@ -23,7 +24,16 @@ export function activate(context: vscode.ExtensionContext) {
     ], settings)
   )
 
-  context.subscriptions.push(addAndCommitAllFilesDisposable, addAndCommitCurrentFileDisposable)
+  const pushLocalCommitsDisposable = vscode.commands.registerCommand(
+    'extension.vscode-git-add-and-commit.pushLocalCommits',
+    () => pushLocalCommits(settings)
+  )
+
+  context.subscriptions.push(
+    addAndCommitAllFilesDisposable,
+    addAndCommitCurrentFileDisposable,
+    pushLocalCommitsDisposable
+  )
 }
 
 export function deactivate() {
