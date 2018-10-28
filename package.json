@@ -10,7 +10,8 @@
   },
   "activationEvents": [
     "onCommand:extension.vscode-git-add-and-commit.addAndCommitAllFiles",
-    "onCommand:extension.vscode-git-add-and-commit.addAndCommitCurrentFile"
+    "onCommand:extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
+    "onCommand:extension.vscode-git-add-and-commit.pushLocalCommits"
   ],
   "contributes": {
     "commands": [
