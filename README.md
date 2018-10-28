@@ -1,7 +1,8 @@
 # Git Add & Commit Extension for Visual Studio Code
 
-- **Add and commit all or current file(s) in one shortcut under VS Code.**
+- **Add and commit all or current file(s) in one shortcut.**
 - **Smart auto-prefill for your commit messages.**
+- **Push all the local commits on the current branch in one shortcut.**
 
 And yes, I'm lazy !
 
@@ -35,6 +36,10 @@ And yes, I'm lazy !
 1. Hit **Ctrl + Shift + P** (PC) / **Cmd + Shift + P** (Mac).
 2. Look for `Preferences: Open User Settings`.
 3. Look for `gaac.` settings to customize them.
+
+### Push local commits
+
+1. Hit **Ctrl + Shift + X** (PC) / **Cmd + Shift + X** (Mac).
 
 ## Roadmap
 
