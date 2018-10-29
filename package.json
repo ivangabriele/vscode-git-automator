@@ -200,8 +200,9 @@
   "scripts": {
     "compile": "tsc -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
     "preversion": "npm run compile",
+    "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {},
