@@ -219,7 +219,8 @@
   "publisher": "ivangabriele",
   "icon": "res/icon.png",
   "categories": [
-    "Other"
+    "Other",
+    "SCM Providers"
   ],
   "keywords": [
     "addon",
