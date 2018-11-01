@@ -1,10 +1,14 @@
 import { GitStatusFile } from '../types'
 
 export default function(gitStatusFiles: GitStatusFile[]): string {
-  let commonPath
+  let commonPath = ''
 
   gitStatusFiles.forEach((gitStatusFile, index) => {
-    if (index === 0) return commonPath = gitStatusFile.path
+    if (index === 0) {
+      commonPath = gitStatusFile.path
+
+      return
+    }
     if (commonPath.length === 0) return
 
     let length = commonPath.length + 1
