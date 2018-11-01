@@ -36,6 +36,4 @@ export function activate(context: vscode.ExtensionContext) {
   )
 }
 
-export function deactivate() {
-  console.log('deactivate()')
-}
+export function deactivate() {}
