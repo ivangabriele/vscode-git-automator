@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Bash/Batch run CWD edge cases.
 - Remove helpers/exec() prod logs.
 - Remove deactivate() prod logs.
+- Wrong error notification when pushing commit.
 - Tests (again).
 
 ## [1.7.3] - 2018-11-01
