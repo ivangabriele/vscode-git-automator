@@ -11,6 +11,7 @@ And yes, I'm lazy !
 [![Travis](https://img.shields.io/travis/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://travis-ci.org/ivangabriele/vscode-git-add-and-commit)
 [![David](https://img.shields.io/david/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
 [![David](https://img.shields.io/david/dev/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit?ref=badge_shield)
 
 [![NSP Status](https://nodesecurity.io/orgs/ivan-gabriele/projects/60814129-32bf-4883-8f98-0d0bf320dde7/badge)](https://nodesecurity.io/orgs/ivan-gabriele/projects/60814129-32bf-4883-8f98-0d0bf320dde7)
 
@@ -66,3 +67,7 @@ To be able to contribute to TFS development, you need to be at ease with **Types
 - [Git Add & Commit extension on Github](https://github.com/ivangabriele/vscode-git-add-and-commit)
 - [Git Add & Commit extension on Visual Studio Market Place](https://marketplace.visualstudio.com/items/ivangabriele.vscode-git-add-and-commit)
 - [MIT Licence](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/LICENSE)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit?ref=badge_large)
