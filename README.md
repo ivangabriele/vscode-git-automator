@@ -61,8 +61,12 @@ To be able to contribute to TFS development, you need to be at ease with **Types
     cd vscode-git-add-and-commit
     npm install
 
-#### Links
+## Links
 
 - [Git Add & Commit extension on Github](https://github.com/ivangabriele/vscode-git-add-and-commit)
 - [Git Add & Commit extension on Visual Studio Market Place](https://marketplace.visualstudio.com/items/ivangabriele.vscode-git-add-and-commit)
 - [MIT Licence](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/LICENSE)
+
+## Licenses
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit?ref=badge_large)
