@@ -54,7 +54,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
     }
 
     // Prefill the commit message with file path
-    if (gitStatusFiles.length === 1 && settings.prefillCommitMessage.withFileWorkspacePath) {
+    if (settings.prefillCommitMessage.withFileWorkspacePath) {
       commitMessage += commonFilePath + ': '
 
       if (settings.prefillCommitMessage.ignoreFileExtension) {
