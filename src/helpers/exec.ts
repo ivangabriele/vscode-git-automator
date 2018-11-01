@@ -1,4 +1,7 @@
 import * as childProcess from 'child_process'
+import { workspace } from 'vscode'
+
+const cwd = workspace.workspaceFolders[0].uri.fsPath
 
 export default async function(command: string, args: string[]): Promise<any> {
   console.log(`${command} ${args.join(' ')}`)
@@ -7,7 +10,7 @@ export default async function(command: string, args: string[]): Promise<any> {
     let res, stderr = '', stdout = ''
 
     try {
-      const batch = childProcess.spawn(command, args)
+      const batch = childProcess.spawn(command, args, { cwd })
 
       batch.stdout.on('data', function(data) {
         stdout += data.toString()
