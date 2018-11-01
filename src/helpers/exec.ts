@@ -4,8 +4,6 @@ import { workspace } from 'vscode'
 const cwd = workspace.workspaceFolders[0].uri.fsPath
 
 export default async function(command: string, args: string[]): Promise<any> {
-  console.log(`${command} ${args.join(' ')}`)
-
   return new Promise((resolve, reject) => {
     let res, stderr = '', stdout = ''
 
