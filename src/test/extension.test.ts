@@ -2,7 +2,7 @@ import * as assert from 'assert'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 
-import exec from '../src/helpers/exec'
+import exec from '../helpers/exec'
 
 suite("Heroku Extension Tests", () => {
   const fixturesPath = path.join(__dirname, 'fixtures')
