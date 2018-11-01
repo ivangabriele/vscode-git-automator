@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.7.4] - 2018-11-02
 
 ### Fixed
+- Mutilple files commit message smart auto-fill.
 - Bash/Batch run CWD edge cases.
 - Remove helpers/exec() prod logs.
 - Remove deactivate() prod logs.
