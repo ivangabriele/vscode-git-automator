@@ -14,21 +14,6 @@ import validateCommitMessage from '../helpers/validateCommitMessage'
 import { GitStatusFile, Settings } from '../types';
 
 export default async function addAndCommitFiles(filesRelativePaths: string[], settings: Settings): Promise<void> {
-  const workspaceRootAbsolutePath = vscode.workspace.workspaceFolders[0].uri.fsPath
-
-  // ----------------------------------
-  // CHANGE DIRECTORY
-
-  try {
-    await changeDirectory(workspaceRootAbsolutePath)
-  }
-  catch (err) {
-    vscode.window.showErrorMessage(err)
-    console.error(err)
-
-    return
-  }
-
   // ----------------------------------
   // GIT ADD
 
