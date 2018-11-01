@@ -1,29 +1,13 @@
 import * as vscode from 'vscode'
 
-import changeDirectory from '../helpers/changeDirectory'
 import gitPush from '../helpers/gitPush'
 import showOptionalMessage from '../helpers/showOptionalMessage'
 
 import { Settings } from '../types';
 
 export default async function pushLocalCommits(settings: Settings): Promise<void> {
-  const workspaceRootAbsolutePath = vscode.workspace.workspaceFolders[0].uri.fsPath
-
   // ----------------------------------
-  // CHANGE DIRECTORY
-
-  try {
-    await changeDirectory(workspaceRootAbsolutePath)
-  }
-  catch (err) {
-    vscode.window.showErrorMessage(err)
-    console.error(err)
-
-    return
-  }
-
-  // ----------------------------------
-  // GIT ADD
+  // GIT PUSH
 
   try {
     await gitPush()
