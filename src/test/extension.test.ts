@@ -4,7 +4,7 @@ import * as path from 'path'
 
 import exec from '../helpers/exec'
 
-suite("Heroku Extension Tests", () => {
+suite("Git Automator Extension Tests", () => {
   const fixturesPath = path.join(__dirname, 'fixtures')
   const fixturesSourcePath = path.join(__dirname, '..', '..', 'src', 'test', 'fixtures')
 
