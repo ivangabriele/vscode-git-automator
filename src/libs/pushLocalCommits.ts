@@ -14,7 +14,7 @@ export default async function pushLocalCommits(settings: Settings): Promise<void
   }
   catch (err) {
     // Git warnings are also caught here, so let's ignore them
-    if (typeof err !== 'string' || err.substr(0, 3) !== 'To ') {
+    if (typeof err !== 'string' || !/^(warning|to\s)/i.test(err)) {
       vscode.window.showErrorMessage(err)
       console.error(err)
 
