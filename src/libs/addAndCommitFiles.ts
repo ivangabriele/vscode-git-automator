@@ -22,7 +22,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
   }
   catch (err) {
     // Git warnings are also caught here, so let's ignore them
-    if (typeof err !== 'string' || err.substr(0, 7) !== 'warning') {
+    if (typeof err !== 'string' || !/^warning/i.test(err)) {
       vscode.window.showErrorMessage(err)
       console.error(err)
 
