@@ -1,5 +1,6 @@
 import { GitStatusFile } from '../types'
 
+// TODO Fix missing last letter for some reason
 export default function(gitStatusFiles: GitStatusFile[]): string {
   let commonPath = ''
 
