@@ -1,4 +1,4 @@
-# Git Add & Commit Extension for Visual Studio Code
+# Git Automator Extension for Visual Studio Code
 
 - **Add and commit all or current file(s) in one shortcut.**
 - **Smart auto-prefill for your commit messages.**
