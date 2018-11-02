@@ -1,6 +1,8 @@
+import to from 'await-to-js'
 import * as vscode from 'vscode'
 
 import gitPush from '../helpers/gitPush'
+import showProgressNotification from '../libs/showProgressNotification'
 import showOptionalMessage from '../helpers/showOptionalMessage'
 
 import { Settings } from '../types';
@@ -9,17 +11,14 @@ export default async function pushLocalCommits(settings: Settings): Promise<void
   // ----------------------------------
   // GIT PUSH
 
-  try {
-    await gitPush()
-  }
-  catch (err) {
-    // Git warnings are also caught here, so let's ignore them
-    if (typeof err !== 'string' || !/^(warning|to\s)/i.test(err)) {
-      vscode.window.showErrorMessage(err)
-      console.error(err)
+  const [err] = await to(showProgressNotification<void>('Pushing your local commits...', gitPush))
+  // Git warnings are also caught here, so let's ignore them
+  // TODO Fix the "To " with rejected commmits case
+  if (typeof err !== 'string' || !/^(warning|to\s)/i.test(err)) {
+    vscode.window.showErrorMessage(err)
+    console.error(err)
 
-      return
-    }
+    return
   }
 
   // ----------------------------------
