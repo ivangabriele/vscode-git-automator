@@ -206,7 +206,9 @@
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
-  "dependencies": {},
+  "dependencies": {
+    "await-to-js": "^2.0.1"
+  },
   "devDependencies": {
     "@types/fs-extra": "^5.0.4",
     "@types/mocha": "^5.2.5",
