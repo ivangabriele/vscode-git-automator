@@ -1,12 +1,9 @@
-*
-*/**
-**/.DS_Store
+.vscode/**
+.vscode-test/**
+out/test/**
+out/**/*.map
+src/**
 
-!out/*.js
-!out/**/*.js
-
-!CHANGELOG.md
-!LICENSE
-!README.md
-!package.json
-!res/icon.png
+.gitignore
+tsconfig.json
+tslint.json
