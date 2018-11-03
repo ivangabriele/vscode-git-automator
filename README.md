@@ -16,7 +16,7 @@ And yes, I'm lazy !
 
 ## Screencast
 
-![Git Automator Screencast](res/screencast.gif)
+![Git Automator Screencast](https://raw.githubusercontent.com/ivangabriele/vscode-git-add-and-commit/master/res/screencast.gif)
 
 ## Usage
 
