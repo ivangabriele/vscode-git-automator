@@ -9,38 +9,38 @@
     "vscode": "^1.28.2"
   },
   "activationEvents": [
-    "onCommand:extension.vscode-git-add-and-commit.addAndCommitAllFiles",
-    "onCommand:extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
-    "onCommand:extension.vscode-git-add-and-commit.pushLocalCommits"
+    "onCommand:extension.vscode-git-automator.addAndCommitAllFiles",
+    "onCommand:extension.vscode-git-automator.addAndCommitCurrentFile",
+    "onCommand:extension.vscode-git-automator.pushLocalCommits"
   ],
   "contributes": {
     "commands": [
       {
-        "command": "extension.vscode-git-add-and-commit.addAndCommitAllFiles",
+        "command": "extension.vscode-git-automator.addAndCommitAllFiles",
         "title": "Add & Commit All Files"
       },
       {
-        "command": "extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
+        "command": "extension.vscode-git-automator.addAndCommitCurrentFile",
         "title": "Add & Commit Current File"
       },
       {
-        "command": "extension.vscode-git-add-and-commit.pushLocalCommits",
+        "command": "extension.vscode-git-automator.pushLocalCommits",
         "title": "Push Local Commits"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.vscode-git-add-and-commit.addAndCommitAllFiles",
+        "command": "extension.vscode-git-automator.addAndCommitAllFiles",
         "key": "ctrl+shift+a",
         "mac": "cmd+shift+a"
       },
       {
-        "command": "extension.vscode-git-add-and-commit.addAndCommitCurrentFile",
+        "command": "extension.vscode-git-automator.addAndCommitCurrentFile",
         "key": "ctrl+shift+z",
         "mac": "cmd+shift+z"
       },
       {
-        "command": "extension.vscode-git-add-and-commit.pushLocalCommits",
+        "command": "extension.vscode-git-automator.pushLocalCommits",
         "key": "ctrl+shift+x",
         "mac": "cmd+shift+x"
       }
@@ -238,10 +238,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivangabriele/vscode-git-add-and-commit.git"
+    "url": "git+https://github.com/ivangabriele/vscode-git-automator.git"
   },
   "bugs": {
-    "url": "https://github.com/ivangabriele/vscode-git-add-and-commit/issues"
+    "url": "https://github.com/ivangabriele/vscode-git-automator/issues"
   },
-  "homepage": "https://github.com/ivangabriele/vscode-git-add-and-commit#readme"
+  "homepage": "https://github.com/ivangabriele/vscode-git-automator#readme"
 }

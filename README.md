@@ -8,15 +8,15 @@ And yes, I'm lazy !
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![Visual Studio Marketplace](https://vsmarketplacebadge.apphb.com/installs-short/ivangabriele.vscode-git-add-and-commit.svg?style=flat-square)](https://marketplace.visualstudio.com/items?itemName=ivangabriele.vscode-git-add-and-commit)
-[![Travis](https://img.shields.io/travis/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://travis-ci.org/ivangabriele/vscode-git-add-and-commit)
-[![David](https://img.shields.io/david/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
-[![David](https://img.shields.io/david/dev/ivangabriele/vscode-git-add-and-commit.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-add-and-commit?type=dev)
+[![Travis](https://img.shields.io/travis/ivangabriele/vscode-git-automator.svg?style=flat-square)](https://travis-ci.org/ivangabriele/vscode-git-automator)
+[![David](https://img.shields.io/david/ivangabriele/vscode-git-automator.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-automator?type=dev)
+[![David](https://img.shields.io/david/dev/ivangabriele/vscode-git-automator.svg?style=flat-square)](https://david-dm.org/ivangabriele/vscode-git-automator?type=dev)
 
 ---
 
 ## Screencast
 
-![Git Automator Screencast](https://raw.githubusercontent.com/ivangabriele/vscode-git-add-and-commit/master/res/screencast.gif)
+![Git Automator Screencast](https://raw.githubusercontent.com/ivangabriele/vscode-git-automator/master/res/screencast.gif)
 
 ## Usage
 
@@ -49,26 +49,26 @@ And yes, I'm lazy !
 
 ## Issues & Feature Requests
 
-Please report any issue or feature request [there](https://github.com/ivangabriele/vscode-git-add-and-commit/issues).
+Please report any issue or feature request [there](https://github.com/ivangabriele/vscode-git-automator/issues).
 
 ## Change Log
 
-Please check the [changelog file](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/CHANGELOG.md).
+Please check the [changelog file](https://github.com/ivangabriele/vscode-git-automator/blob/master/CHANGELOG.md).
 
 ## Contribute
 
 To be able to contribute to TFS development, you need to be at ease with **Typescript** and **Git** usage.
 
-    git clone https://github.com/ivangabriele/vscode-git-add-and-commit.git
-    cd vscode-git-add-and-commit
+    git clone https://github.com/ivangabriele/vscode-git-automator.git
+    cd vscode-git-automator
     npm install
 
 ## Links
 
-- [Git Add & Commit extension on Github](https://github.com/ivangabriele/vscode-git-add-and-commit)
-- [Git Add & Commit extension on Visual Studio Market Place](https://marketplace.visualstudio.com/items/ivangabriele.vscode-git-add-and-commit)
-- [MIT Licence](https://github.com/ivangabriele/vscode-git-add-and-commit/blob/master/LICENSE)
+- [Git Add & Commit extension on Github](https://github.com/ivangabriele/vscode-git-automator)
+- [Git Add & Commit extension on Visual Studio Market Place](https://marketplace.visualstudio.com/items/ivangabriele.vscode-git-automator)
+- [MIT Licence](https://github.com/ivangabriele/vscode-git-automator/blob/master/LICENSE)
 
 ## Licenses
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-add-and-commit?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-automator.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fivangabriele%2Fvscode-git-automator?ref=badge_large)
