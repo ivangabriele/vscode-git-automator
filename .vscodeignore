@@ -7,3 +7,6 @@ src/**
 .gitignore
 tsconfig.json
 tslint.json
+
+# Custom
+/res
