@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Align new naming for consistency.
+- Handle git push up-to-date case.
+
+### Fixed
+- Missing last letter in auto-fill common path.
+- Rejected commits case when pushing.
 
 ## [2.0.1] - 2018-11-03
 
