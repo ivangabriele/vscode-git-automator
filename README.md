@@ -44,8 +44,8 @@ And yes, I'm lazy !
 
 ## Roadmap
 
-* Fix "git add ." common path detection.
 * Multiple files selection.
+* Auto-pull setting for auto-pull before pushing
 
 ## Issues & Feature Requests
 
