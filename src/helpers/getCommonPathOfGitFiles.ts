@@ -17,7 +17,11 @@ export default function(gitStatusFiles: GitStatusFile[]): string {
       if (gitStatusFile.path.substr(0, length) === commonPath.substr(0, length)) break
     }
 
-    if (length === 0) return
+    if (length === 0) {
+      commonPath = ''
+
+      return
+    }
     commonPath = commonPath.substr(0, length)
   })
 
