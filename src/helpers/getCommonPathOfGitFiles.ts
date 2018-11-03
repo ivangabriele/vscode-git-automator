@@ -1,6 +1,5 @@
 import { GitStatusFile } from '../types'
 
-// TODO Fix missing last letter for some reason
 export default function(gitStatusFiles: GitStatusFile[]): string {
   let commonPath = ''
 
@@ -27,7 +26,7 @@ export default function(gitStatusFiles: GitStatusFile[]): string {
 
   // Remove the trailing slash
   if (commonPath.length !== 0 && commonPath[commonPath.length - 1] === '/') {
-    commonPath = commonPath.substr(0, commonPath.length - 2)
+    commonPath = commonPath.substr(0, commonPath.length - 1)
   }
 
   return commonPath
