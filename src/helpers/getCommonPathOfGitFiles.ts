@@ -25,6 +25,7 @@ export default function(gitStatusFiles: GitStatusFile[]): string {
   })
 
   // Remove the trailing slash
+  // TODO Handle common path with a trailing dot
   if (commonPath.length !== 0 && commonPath[commonPath.length - 1] === '/') {
     commonPath = commonPath.substr(0, commonPath.length - 1)
   }
