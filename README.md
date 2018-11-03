@@ -14,6 +14,10 @@ And yes, I'm lazy !
 
 ---
 
+## Screencast
+
+![Git Automator Screencast](res/screencast.gif)
+
 ## Usage
 
 ### Add all edited files to Git and commit them
