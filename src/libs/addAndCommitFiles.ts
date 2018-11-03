@@ -53,44 +53,47 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
       commonFilePath = getCommonPathOfGitFiles(gitStatusFiles)
     }
 
-    // Prefill the commit message with file path
-    if (settings.prefillCommitMessage.withFileWorkspacePath) {
-      commitMessage += commonFilePath + ': '
+    // Enable the commit message auto-fill ONLY if we were able to find a common path
+    if (commonFilePath.length !== 0) {
+      // Prefill the commit message with file path
+      if (settings.prefillCommitMessage.withFileWorkspacePath) {
+        commitMessage += commonFilePath + ': '
 
-      if (settings.prefillCommitMessage.ignoreFileExtension) {
-        const matches = commitMessage.match(/[^\/](\.\w+):/)
-        if (matches !== null && matches.length === 2) {
-          commitMessage = commitMessage.replace(matches[1], '')
+        if (settings.prefillCommitMessage.ignoreFileExtension) {
+          const matches = commitMessage.match(/[^\/](\.\w+):/)
+          if (matches !== null && matches.length === 2) {
+            commitMessage = commitMessage.replace(matches[1], '')
+          }
         }
       }
+
+      // Force the commit message into lower case
+      if (settings.prefillCommitMessage.forceLowerCase) {
+        commitMessage = commitMessage.toLocaleLowerCase()
+      }
+
+      // Prefill the commit message with the guessed action
+      if (gitStatusFiles.length === 1) {
+        commitMessage = guessAction(
+          commitMessage,
+          gitStatusFiles[0].state,
+          settings.prefillCommitMessage.withGuessedCustomActions
+        )
+      }
+
+      // Prefill the commit message with settings patterns
+      commitMessage = replaceStringWith(commitMessage, settings.prefillCommitMessage.replacePatternWith)
+
+      // Prompt user for the commit message
+      commitMessage = await vscode.window.showInputBox({
+        ignoreFocusOut: true,
+        prompt: 'Git commit message ?',
+        validateInput: commitMessage => !validateCommitMessage(commitMessage)
+          ? `You can't commit with an empty commit message. Write something or press ESC to cancel.`
+          : undefined,
+        value: commitMessage
+      })
     }
-
-    // Force the commit message into lower case
-    if (settings.prefillCommitMessage.forceLowerCase) {
-      commitMessage = commitMessage.toLocaleLowerCase()
-    }
-
-    // Prefill the commit message with the guessed action
-    if (gitStatusFiles.length === 1) {
-      commitMessage = guessAction(
-        commitMessage,
-        gitStatusFiles[0].state,
-        settings.prefillCommitMessage.withGuessedCustomActions
-      )
-    }
-
-    // Prefill the commit message with settings patterns
-    commitMessage = replaceStringWith(commitMessage, settings.prefillCommitMessage.replacePatternWith)
-
-    // Prompt user for the commit message
-    commitMessage = await vscode.window.showInputBox({
-      ignoreFocusOut: true,
-      prompt: 'Git commit message ?',
-      validateInput: commitMessage => !validateCommitMessage(commitMessage)
-        ? `You can't commit with an empty commit message. Write something or press ESC to cancel.`
-        : undefined,
-      value: commitMessage
-    })
   }
   catch (err) {
     vscode.window.showErrorMessage(err)
