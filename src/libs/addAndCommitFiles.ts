@@ -83,17 +83,17 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
 
       // Prefill the commit message with settings patterns
       commitMessage = replaceStringWith(commitMessage, settings.prefillCommitMessage.replacePatternWith)
-
-      // Prompt user for the commit message
-      commitMessage = await vscode.window.showInputBox({
-        ignoreFocusOut: true,
-        prompt: 'Git commit message ?',
-        validateInput: commitMessage => !validateCommitMessage(commitMessage)
-          ? `You can't commit with an empty commit message. Write something or press ESC to cancel.`
-          : undefined,
-        value: commitMessage
-      })
     }
+
+    // Prompt user for the commit message
+    commitMessage = await vscode.window.showInputBox({
+      ignoreFocusOut: true,
+      prompt: 'Git commit message ?',
+      validateInput: commitMessage => !validateCommitMessage(commitMessage)
+        ? `You can't commit with an empty commit message. Write something or press ESC to cancel.`
+        : undefined,
+      value: commitMessage
+    })
   }
   catch (err) {
     vscode.window.showErrorMessage(err)
