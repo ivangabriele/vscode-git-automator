@@ -44,6 +44,7 @@ And yes, I'm lazy !
 
 ## Roadmap
 
+* Multiple workspaces (in the same window) support
 * Multiple files selection.
 * Auto-pull setting for auto-pull before pushing
 
