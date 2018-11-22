@@ -207,7 +207,7 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "await-to-js": "^2.0.1",
+    "await-to-js": "^2.1.0",
     "rorre": "^1.0.1"
   },
   "devDependencies": {
