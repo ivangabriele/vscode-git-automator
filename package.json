@@ -207,7 +207,7 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "await-to-js": "^2.0.1",
+    "await-to-js": "^2.1.1",
     "rorre": "^1.0.1"
   },
   "devDependencies": {
@@ -217,7 +217,7 @@
     "fs-extra": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6",
-    "vscode": "^1.1.21"
+    "vscode": "^1.1.22"
   },
   "author": {
     "name": "Ivan Gabriele",
