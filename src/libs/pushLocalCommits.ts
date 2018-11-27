@@ -15,10 +15,11 @@ export default async function pushLocalCommits(settings: Settings): Promise<void
 
   // Git warnings are also caught here, so let's ignore them
   if (typeof err !== 'string' || !(/^to\s/i.test(err) && !/!\s\[rejected\]/i.test(err))) {
-    if (err === 'Everything up-to-date') {
-      vscode.window.showInformationMessage(err)
+    const errMessage = typeof err !== 'string' ? err.message : err
+    if (errMessage === 'Everything up-to-date') {
+      vscode.window.showInformationMessage(errMessage)
     } else {
-      vscode.window.showErrorMessage(err)
+      vscode.window.showErrorMessage(errMessage)
       console.error(err)
 
       return
