@@ -217,7 +217,7 @@
     "fs-extra": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^3.2.1",
-    "vscode": "^1.1.22"
+    "vscode": "^1.1.24"
   },
   "author": {
     "name": "Ivan Gabriele",
