@@ -215,7 +215,7 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.4",
     "fs-extra": "^7.0.1",
-    "tslint": "^5.15.0",
+    "tslint": "^5.16.0",
     "typescript": "^3.4.3",
     "vscode": "^1.1.33"
   },
