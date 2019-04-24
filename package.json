@@ -216,7 +216,7 @@
     "@types/node": "^11.13.7",
     "fs-extra": "^7.0.1",
     "tslint": "^5.16.0",
-    "typescript": "^3.4.4",
+    "typescript": "^3.4.5",
     "vscode": "^1.1.33"
   },
   "author": {
