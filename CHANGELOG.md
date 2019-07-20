@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.1.0] - 2019-07-20
 
-### Changed
+### Added
 - Single-bundle distribution.
+
+### Changed
+- VS Code target to v1.36.0
 - Dependencies upgrade.
 - Migration to legacy repository in order to split the
   [next major release](https://github.com/ivangabriele/vscode-git-automator) development.
