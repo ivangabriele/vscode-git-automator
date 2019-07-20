@@ -1,12 +1,14 @@
-.vscode/**
-.vscode-test/**
-out/test/**
-out/**/*.map
-src/**
+/.vscode/**
+/.vscode-test/**
+/node_modules/**
+/out/test/**
+/src/**
 
-.gitignore
-tsconfig.json
-tslint.json
-
-# Custom
+/out/**/*.map
 /res/*.svg
+/.editorconfig
+/.gitignore
+/.travis.yml
+/tsconfig.json
+/tslint.json
+/yarn.lock
