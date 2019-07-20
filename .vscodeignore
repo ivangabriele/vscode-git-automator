@@ -9,4 +9,4 @@ tsconfig.json
 tslint.json
 
 # Custom
-/res
+/res/*.svg
