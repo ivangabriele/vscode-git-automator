@@ -7,7 +7,7 @@
     "outDir": "out",
     "preserveConstEnums": true,
     "rootDir": "src",
-    "sourceMap": false,
+    "sourceMap": true,
     "target": "es6"
   }
 }
