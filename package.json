@@ -1,6 +1,6 @@
 {
   "name": "vscode-git-add-and-commit",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "displayName": "Git Automator",
   "description": "Automate your commit messages & your Git workflow.",
   "main": "./out/extension.js",
