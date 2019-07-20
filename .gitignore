@@ -1,6 +1,7 @@
-!.vscode
-.vscode-test
-node_modules
-out
+/.vscode-test
+/node_modules
+/out
+
+/.vscode/settings.json
 
 .vsix
