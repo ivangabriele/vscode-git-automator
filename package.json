@@ -6,7 +6,7 @@
   "main": "./out/extension.js",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.28.2"
+    "vscode": "^1.36.0"
   },
   "activationEvents": [
     "onCommand:extension.vscode-git-automator.addAndCommitAllFiles",
