@@ -3,7 +3,7 @@
   "version": "2.0.4",
   "displayName": "Git Automator",
   "description": "Automate your commit messages & your Git workflow.",
-  "main": "./out/extension",
+  "main": "./out/extension.js",
   "license": "MIT",
   "engines": {
     "vscode": "^1.28.2"
@@ -198,13 +198,14 @@
     }
   },
   "scripts": {
-    "compile": "tsc -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test",
-    "preversion": "npm run compile",
+    "compile": "rimraf ./out && rollup -c",
+    "compile:dev": "tsc -p ./",
+    "pretest": "rimraf ./out && yarn compile:dev",
+    "test": "node ./node_modules/vscode/bin/test",
+    "preversion": "yarn compile",
     "postversion": "git push origin HEAD && git push --tags",
-    "vscode:prepublish": "npm run compile",
-    "watch": "tsc -watch -p ./"
+    "vscode:prepublish": "yarn compile",
+    "watch": "rimraf ./out && yarn compile:dev --watch"
   },
   "dependencies": {
     "await-to-js": "2.1.1",
@@ -214,8 +215,12 @@
     "@types/fs-extra": "8.0.0",
     "@types/mocha": "5.2.7",
     "@types/node": "12.6.3",
+    "@types/vscode": "1.36.0",
     "fs-extra": "8.1.0",
+    "rimraf": "2.6.3",
     "rollup": "1.17.0",
+    "rollup-plugin-commonjs": "10.0.1",
+    "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-typescript2": "0.22.0",
     "tslint": "5.18.0",
     "typescript": "3.5.3",

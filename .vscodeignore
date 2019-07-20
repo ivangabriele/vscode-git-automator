@@ -3,12 +3,14 @@
 /.vscode-test/**
 /node_modules/**
 /out/**
+!/out/extension.js
 /src/**
 
 /res/*.svg
 /.editorconfig
 /.gitignore
 /.travis.yml
+/rollup.config.js
 /tsconfig.json
 /tslint.json
 /yarn.lock

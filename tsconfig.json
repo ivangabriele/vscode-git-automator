@@ -1,13 +1,22 @@
 {
   "compilerOptions": {
+    "inlineSources": true,
 		"moduleResolution": "node",
 		"noImplicitAny": false,
-		"removeComments": false,
+		"removeComments": true,
     "module": "es2015",
-    "outDir": "out",
+    "outDir": "./out",
     "preserveConstEnums": true,
-    "rootDir": "src",
+    "skipDefaultLibCheck": true,
+    "rootDir": "./src",
     "sourceMap": true,
-    "target": "es6"
-  }
+    "target": "es2015"
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./node_modules/**/*",
+    "./out/**/*"
+  ]
 }
