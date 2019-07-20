@@ -239,10 +239,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivangabriele/vscode-git-automator.git"
+    "url": "https://github.com/ivangabriele/vscode-git-automator-legacy.git"
   },
   "bugs": {
-    "url": "https://github.com/ivangabriele/vscode-git-automator/issues"
+    "url": "https://github.com/ivangabriele/vscode-git-automator-legacy/issues"
   },
-  "homepage": "https://github.com/ivangabriele/vscode-git-automator#readme"
+  "homepage": "https://github.com/ivangabriele/vscode-git-automator-legacy#readme"
 }
