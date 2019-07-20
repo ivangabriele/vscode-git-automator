@@ -207,17 +207,17 @@
     "watch": "tsc -watch -p ./"
   },
   "dependencies": {
-    "await-to-js": "^2.1.1",
-    "rorre": "^1.1.0"
+    "await-to-js": "2.1.1",
+    "rorre": "1.1.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.0.0",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.6.3",
-    "fs-extra": "^8.1.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.3",
-    "vscode": "^1.1.35"
+    "@types/fs-extra": "8.0.0",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.6.3",
+    "fs-extra": "8.1.0",
+    "tslint": "5.18.0",
+    "typescript": "3.5.3",
+    "vscode": "1.1.35"
   },
   "author": {
     "name": "Ivan Gabriele",
