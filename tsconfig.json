@@ -3,7 +3,7 @@
 		"moduleResolution": "node",
 		"noImplicitAny": false,
 		"removeComments": false,
-    "module": "commonjs",
+    "module": "es2015",
     "outDir": "out",
     "preserveConstEnums": true,
     "rootDir": "src",
