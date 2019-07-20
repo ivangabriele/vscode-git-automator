@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2019-07-20
+
+### Changed
+- Single-bundle distribution.
+- Dependencies upgrade.
+- Migration to legacy repository in order to split the
+  [next major release](https://github.com/ivangabriele/vscode-git-automator) development.
+
+### Fixed
+- Dependencies vulnerabilities.
+
+## [2.0.4] - 2018-11-10
+
+### Changed
+- Dependencies upgrade.
+- Readme roadmap.
+
 ## [2.0.3] - 2018-11-04
 
 ### Changed
