@@ -1,10 +1,9 @@
 /.vscode/**
 /.vscode-test/**
 /node_modules/**
-/out/test/**
+/out/**
 /src/**
 
-/out/**/*.map
 /res/*.svg
 /.editorconfig
 /.gitignore
