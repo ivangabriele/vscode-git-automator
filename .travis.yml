@@ -25,3 +25,6 @@ install:
 
 script:
   - yarn --silent
+
+notifications:
+  email: false
