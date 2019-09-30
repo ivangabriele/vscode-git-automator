@@ -209,7 +209,7 @@
   },
   "dependencies": {
     "await-to-js": "2.1.1",
-    "rorre": "1.1.0"
+    "rorre": "1.2.0"
   },
   "devDependencies": {
     "@types/fs-extra": "8.0.0",
