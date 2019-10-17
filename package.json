@@ -212,7 +212,7 @@
     "rorre": "1.2.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "8.0.0",
+    "@types/fs-extra": "8.0.1",
     "@types/mocha": "5.2.7",
     "@types/node": "12.11.1",
     "@types/vscode": "1.39.0",
