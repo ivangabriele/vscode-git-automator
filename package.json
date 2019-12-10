@@ -214,7 +214,7 @@
   "devDependencies": {
     "@types/fs-extra": "8.0.1",
     "@types/mocha": "5.2.7",
-    "@types/node": "12.12.14",
+    "@types/node": "12.12.16",
     "@types/vscode": "1.40.0",
     "fs-extra": "8.1.0",
     "rimraf": "3.0.0",
