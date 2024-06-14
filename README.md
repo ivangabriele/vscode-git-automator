@@ -1,3 +1,24 @@
+<p align="center">
+  <img alt="OpenAI Forge Logo" height="128" src="assets/icons/x512.png" />
+  <h1 align="center">OpenAI Forge</h1>
+</p>
+
+<p align="center">
+  <a href="https://github.com/ivangabriele/vscode-git-automator/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/ivangabriele/vscode-git-automator?style=for-the-badge" alt="MIT License">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=ivangabriele.vscode-git-add-and-commit">
+    <img src="https://img.shields.io/visual-studio-marketplace/i/ivangabriele.vscode-git-add-and-commit?style=for-the-badge" alt="Visual Studio Marketplace">
+  </a>
+  <a href="https://github.com/ivangabriele/vscode-git-automator/actions?query=check">
+    <img src="https://img.shields.io/github/actions/workflow/status/ivangabriele/vscode-git-automator/check.yml?label=Tests&amp;style=for-the-badge" alt="Check Workflow Status">
+  </a>
+</p>
+
+<p align="center"><b>Automate your commit messages & your Git workflow.</b></p>
+
+---
+
 # Git Automator Extension for Visual Studio Code
 
 - **Add and commit all or current file(s) in one shortcut.**
