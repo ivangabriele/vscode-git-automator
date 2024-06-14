@@ -1,6 +1,6 @@
 <p align="center">
-  <img alt="OpenAI Forge Logo" height="128" src="assets/icons/x512.png" />
-  <h1 align="center">OpenAI Forge</h1>
+  <img alt="VSCode Git Automator Logo" height="128" src="res/icon.png" />
+  <h1 align="center">VSCode Git Automator</h1>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 
 ---
 
-# Git Automator Extension for Visual Studio Code
+## Git Automator Extension for Visual Studio Code
 
 - **Add and commit all or current file(s) in one shortcut.**
 - **Smart auto-prefill for your commit messages.**
