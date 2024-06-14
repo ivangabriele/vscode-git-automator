@@ -1,0 +1,61 @@
+name: Check
+
+on: push
+
+jobs:
+  lint:
+    name: Lint
+    if: ${{ !startsWith(github.ref, 'refs/heads/ci-release-v') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version: 20
+      - name: Install
+        uses: ./.github/actions/install
+      - name: Lint code
+        run: yarn test:lint
+
+  type:
+    name: Type
+    if: ${{ !startsWith(github.ref, 'refs/heads/ci-release-v') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version: 20
+      - name: Install
+        uses: ./.github/actions/install
+      - name: Type
+        run: yarn test:type
+
+  test_unit:
+    name: Unit Test
+    if: ${{ !startsWith(github.ref, 'refs/heads/ci-release-v') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version: 20
+      - name: Install
+        uses: ./.github/actions/install
+      - name: Test
+        # run: yarn test:unit --coverage
+        run: yarn test:unit
+      # - name: Upload coverage
+      #   uses: codecov/codecov-action@v4
+      #   with:
+      #     flags: unit
+      #     token: ${{ secrets.CODECOV_TOKEN }}
