@@ -26,6 +26,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.1",
     "@ivangabriele/biome-config": "1.0.2",
+    "@ivangabriele/tsconfig-node": "2.0.0",
     "@types/fs-extra": "8.0.1",
     "@types/mocha": "5.2.7",
     "@types/node": "12.12.21",
@@ -37,7 +38,7 @@
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-typescript2": "0.24.3",
     "tslint": "5.20.1",
-    "typescript": "3.7.4",
+    "typescript": "5.4.5",
     "vscode": "1.1.36"
   },
   "packageManager": "yarn@4.3.0",

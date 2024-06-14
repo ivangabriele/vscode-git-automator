@@ -1,9 +1,10 @@
 {
+  "extends": "@ivangabriele/tsconfig-node",
   "compilerOptions": {
     "inlineSources": true,
-		"moduleResolution": "node",
-		"noImplicitAny": false,
-		"removeComments": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": true,
     "module": "es2015",
     "outDir": "./out",
     "preserveConstEnums": true,
@@ -12,11 +13,6 @@
     "sourceMap": true,
     "target": "es2015"
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "./node_modules/**/*",
-    "./out/**/*"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["./node_modules/**/*", "./out/**/*"]
 }
