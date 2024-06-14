@@ -162,12 +162,7 @@
                 "minLength": 1
               },
               "state": {
-                "enum": [
-                  "ADDED",
-                  "DELETED",
-                  "MODIFIED",
-                  "RENAMED"
-                ]
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
               }
             }
           }
@@ -218,12 +213,7 @@
                 "minLength": 1
               },
               "state": {
-                "enum": [
-                  "ADDED",
-                  "DELETED",
-                  "MODIFIED",
-                  "RENAMED"
-                ]
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
               }
             }
           }
@@ -238,17 +228,8 @@
   },
   "publisher": "ivangabriele",
   "icon": "res/icon.png",
-  "categories": [
-    "Other",
-    "SCM Providers"
-  ],
-  "keywords": [
-    "addon",
-    "extension",
-    "git",
-    "shortcut",
-    "vscode"
-  ],
+  "categories": ["Other", "SCM Providers"],
+  "keywords": ["addon", "extension", "git", "shortcut", "vscode"],
   "repository": {
     "type": "git",
     "url": "https://github.com/ivangabriele/vscode-git-automator-legacy.git"

@@ -1,17 +1,16 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode"
 
-import cancelAdd from './cancelAdd'
-import changeDirectory from '../helpers/changeDirectory'
-import getCommonPathOfGitFiles from '../helpers/getCommonPathOfGitFiles'
-import getGitStatusFiles from '../helpers/getGitStatusFiles'
-import gitAdd from '../helpers/gitAdd'
-import gitCommit from '../helpers/gitCommit'
-import guessAction from '../helpers/guessAction'
-import replaceStringWith from '../helpers/replaceStringWith'
-import showOptionalMessage from '../helpers/showOptionalMessage'
-import validateCommitMessage from '../helpers/validateCommitMessage'
+import getCommonPathOfGitFiles from "../helpers/getCommonPathOfGitFiles"
+import getGitStatusFiles from "../helpers/getGitStatusFiles"
+import gitAdd from "../helpers/gitAdd"
+import gitCommit from "../helpers/gitCommit"
+import guessAction from "../helpers/guessAction"
+import replaceStringWith from "../helpers/replaceStringWith"
+import showOptionalMessage from "../helpers/showOptionalMessage"
+import validateCommitMessage from "../helpers/validateCommitMessage"
+import cancelAdd from "./cancelAdd"
 
-import { GitStatusFile, Settings } from '../types';
+import type { Settings } from "../types"
 
 export default async function addAndCommitFiles(filesRelativePaths: string[], settings: Settings): Promise<void> {
   // ----------------------------------
@@ -19,10 +18,9 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
 
   try {
     await gitAdd(filesRelativePaths)
-  }
-  catch (err) {
+  } catch (err) {
     // Git warnings are also caught here, so let's ignore them
-    if (typeof err !== 'string' || !/^warning/i.test(err)) {
+    if (typeof err !== "string" || !/^warning/i.test(err)) {
       vscode.window.showErrorMessage(err)
       console.error(err)
 
@@ -33,7 +31,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
   // ----------------------------------
   // COMMIT MESSAGE
 
-  let commitMessage = ''
+  let commitMessage = ""
   let commonFilePath: string
 
   try {
@@ -57,12 +55,12 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
     if (commonFilePath.length !== 0) {
       // Prefill the commit message with file path
       if (settings.prefillCommitMessage.withFileWorkspacePath) {
-        commitMessage += commonFilePath + ': '
+        commitMessage += commonFilePath + ": "
 
         if (settings.prefillCommitMessage.ignoreFileExtension) {
           const matches = commitMessage.match(/[^\/](\.\w+):/)
           if (matches !== null && matches.length === 2) {
-            commitMessage = commitMessage.replace(matches[1], '')
+            commitMessage = commitMessage.replace(matches[1], "")
           }
         }
       }
@@ -77,7 +75,7 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
         commitMessage = guessAction(
           commitMessage,
           gitStatusFiles[0].state,
-          settings.prefillCommitMessage.withGuessedCustomActions
+          settings.prefillCommitMessage.withGuessedCustomActions,
         )
       }
 
@@ -88,14 +86,14 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
     // Prompt user for the commit message
     commitMessage = await vscode.window.showInputBox({
       ignoreFocusOut: true,
-      prompt: 'Git commit message ?',
-      validateInput: commitMessage => !validateCommitMessage(commitMessage)
-        ? `You can't commit with an empty commit message. Write something or press ESC to cancel.`
-        : undefined,
-      value: commitMessage
+      prompt: "Git commit message ?",
+      validateInput: (commitMessage) =>
+        validateCommitMessage(commitMessage)
+          ? undefined
+          : `You can't commit with an empty commit message. Write something or press ESC to cancel.`,
+      value: commitMessage,
     })
-  }
-  catch (err) {
+  } catch (err) {
     vscode.window.showErrorMessage(err)
     console.error(err)
 
@@ -114,10 +112,9 @@ export default async function addAndCommitFiles(filesRelativePaths: string[], se
 
   try {
     await gitCommit(commitMessage)
-  }
-  catch (err) {
+  } catch (err) {
     // Git warnings are also caught here, so let's ignore them
-    if (typeof err !== 'string' || !/^warning/i.test(err)) {
+    if (typeof err !== "string" || !/^warning/i.test(err)) {
       vscode.window.showErrorMessage(err)
       console.error(err)
 

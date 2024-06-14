@@ -1,6 +1,6 @@
-import { WorkspaceConfiguration } from 'vscode'
+import type { WorkspaceConfiguration } from "vscode"
 
-export type FileGitState = 'ADDED' | 'DELETED' | 'MODIFIED' | 'RENAMED'
+export type FileGitState = "ADDED" | "DELETED" | "MODIFIED" | "RENAMED"
 
 export interface GitStatusFile {
   oldPath?: string
@@ -31,22 +31,22 @@ export interface Settings {
 }
 
 export interface SettingsPrefillCommitMessage extends WorkspaceConfiguration {
-    /*
+  /*
       @description
       Show "optional" warning and info messages in the status bar instead of the top modals.
     */
-   disableOptionalMessages?: boolean
+  disableOptionalMessages?: boolean
 
-   /*
+  /*
      @description
      Force all character in the prefilled commit message to be in lower case.
 
      @example
      "README: " => "readme: "
    */
-   forceLowerCase?: boolean
+  forceLowerCase?: boolean
 
-   /*
+  /*
      @description
      Ignore the file extension in the commit message.
 
@@ -56,9 +56,9 @@ export interface SettingsPrefillCommitMessage extends WorkspaceConfiguration {
      @note
      - Only useful when the `withFileWorkspacePath` setting is TRUE.
    */
-   ignoreFileExtension?: boolean
+  ignoreFileExtension?: boolean
 
-   /*
+  /*
      @description
      Replace the commit message via a pattern. These replacements are executed after everything else,
      BUT before your own edit (in the prompt field).
@@ -74,18 +74,18 @@ export interface SettingsPrefillCommitMessage extends WorkspaceConfiguration {
      - Only useful when the `withFileWorkspacePath` setting is TRUE.
      - This option is run after everything else, so take that into account for your patterns.
    */
-   replacePatternWith?: SettingsPattern[]
+  replacePatternWith?: SettingsPattern[]
 
-   /*
+  /*
      @description
      Prefill the commit message with the workspace relative file path, followed by ": ",
 
      @example
      "res/icon.png: "
    */
-   withFileWorkspacePath?: boolean
+  withFileWorkspacePath?: boolean
 
-   /*
+  /*
      @description
      Try to guess the action when it's obvious and add it to the prefilled commit message.
 
@@ -97,9 +97,9 @@ export interface SettingsPrefillCommitMessage extends WorkspaceConfiguration {
      @note
      - This option only works when one file or one directory has been created, moved/renamed, or deleted.
    */
-   withGuessedAction?: boolean
+  withGuessedAction?: boolean
 
-   /*
+  /*
      @description
      Add a custom action for any prefilled commit matching a pattern and Git state.
      The `state` can be any one of: "ADDED", "DELETED", "MODIFIED", "RENAMED"
@@ -114,5 +114,5 @@ export interface SettingsPrefillCommitMessage extends WorkspaceConfiguration {
      - This option can override the `withGuessedAction`.
      - This option is run just before the `replacePatternWith`, so take that into account for your patterns.
    */
-   withGuessedCustomActions?: GuessCustomAction[]
+  withGuessedCustomActions?: GuessCustomAction[]
 }

@@ -1,4 +1,4 @@
-import { Settings, SettingsPattern } from '../types';
+import type { SettingsPattern } from "../types"
 
 export default function replaceStringWith(str: string, patterns: SettingsPattern[]): string {
   return patterns.reduce((reducedStr: string, { pattern, with: val }: SettingsPattern): string => {

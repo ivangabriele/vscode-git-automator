@@ -1,29 +1,24 @@
-import { FileGitState, GuessCustomAction } from '../types';
+import type { GuessCustomAction } from "../types"
 
-export default function(commitMessage: string, state, customActions: GuessCustomAction[]): string {
-  const customAction = customActions.find(
-    ({ pattern: actionPattern, state: actionState }: GuessCustomAction) => {
-      if (actionState !== state) return false
+export default function (commitMessage: string, state, customActions: GuessCustomAction[]): string {
+  const customAction = customActions.find(({ pattern: actionPattern, state: actionState }: GuessCustomAction) => {
+    if (actionState !== state) return false
 
-      return typeof actionPattern === 'string'
-        ? commitMessage.includes(actionPattern)
-        : actionPattern.test(commitMessage)
-    },
-    customActions
-  )
+    return typeof actionPattern === "string" ? commitMessage.includes(actionPattern) : actionPattern.test(commitMessage)
+  }, customActions)
 
   if (customAction === undefined) {
     switch (state) {
-      case 'ADDED':
-        commitMessage += 'create'
+      case "ADDED":
+        commitMessage += "create"
         break
 
-      case 'DELETED':
-        commitMessage += 'remove'
+      case "DELETED":
+        commitMessage += "remove"
         break
 
-      case 'RENAMED':
-        commitMessage += 'move'
+      case "RENAMED":
+        commitMessage += "move"
         break
 
       default:
@@ -33,5 +28,5 @@ export default function(commitMessage: string, state, customActions: GuessCustom
     return commitMessage
   }
 
-  return commitMessage += customAction.action
+  return (commitMessage += customAction.action)
 }

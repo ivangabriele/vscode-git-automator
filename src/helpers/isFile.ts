@@ -1,14 +1,13 @@
-import * as fs from 'fs'
+import * as fs from "fs"
 
-export default function(fileAbsolutePath: string): boolean {
+export default function (fileAbsolutePath: string): boolean {
   try {
     if (fs.lstatSync(fileAbsolutePath).isFile()) {
       return true
     }
 
     return false
-  }
-  catch (err) {
+  } catch (err) {
     return false
   }
 }
