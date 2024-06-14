@@ -8,6 +8,36 @@
   "engines": {
     "vscode": "^1.36.0"
   },
+  "scripts": {
+    "compile": "rimraf ./out && rollup -c",
+    "compile:dev": "tsc -p ./",
+    "pretest": "rimraf ./out && yarn compile:dev",
+    "test": "node ./node_modules/vscode/bin/test",
+    "preversion": "yarn compile",
+    "postversion": "git push origin HEAD && git push --tags",
+    "vscode:prepublish": "yarn compile",
+    "watch": "rimraf ./out && yarn compile:dev --watch"
+  },
+  "dependencies": {
+    "await-to-js": "2.1.1",
+    "rorre": "1.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "8.0.1",
+    "@types/mocha": "5.2.7",
+    "@types/node": "12.12.21",
+    "@types/vscode": "1.41.0",
+    "fs-extra": "8.1.0",
+    "rimraf": "3.0.0",
+    "rollup": "1.29.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-typescript2": "0.24.3",
+    "tslint": "5.20.1",
+    "typescript": "3.7.4",
+    "vscode": "1.1.36"
+  },
+  "packageManager": "yarn@4.3.0",
   "activationEvents": [
     "onCommand:extension.vscode-git-automator.addAndCommitAllFiles",
     "onCommand:extension.vscode-git-automator.addAndCommitCurrentFile",
@@ -196,35 +226,6 @@
         }
       }
     }
-  },
-  "scripts": {
-    "compile": "rimraf ./out && rollup -c",
-    "compile:dev": "tsc -p ./",
-    "pretest": "rimraf ./out && yarn compile:dev",
-    "test": "node ./node_modules/vscode/bin/test",
-    "preversion": "yarn compile",
-    "postversion": "git push origin HEAD && git push --tags",
-    "vscode:prepublish": "yarn compile",
-    "watch": "rimraf ./out && yarn compile:dev --watch"
-  },
-  "dependencies": {
-    "await-to-js": "2.1.1",
-    "rorre": "1.2.0"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "8.0.1",
-    "@types/mocha": "5.2.7",
-    "@types/node": "12.12.21",
-    "@types/vscode": "1.41.0",
-    "fs-extra": "8.1.0",
-    "rimraf": "3.0.0",
-    "rollup": "1.29.0",
-    "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-typescript2": "0.24.3",
-    "tslint": "5.20.1",
-    "typescript": "3.7.4",
-    "vscode": "1.1.36"
   },
   "author": {
     "name": "Ivan Gabriele",

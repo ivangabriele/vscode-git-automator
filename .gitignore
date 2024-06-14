@@ -141,6 +141,18 @@ dist
 .svelte-kit
 
 ################################################################################
+# Yarn without Zero-Installs
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+################################################################################
 # Custom
 
 /.rpt2_cache
