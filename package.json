@@ -13,6 +13,7 @@
     "compile:dev": "tsc -p ./",
     "pretest": "rimraf ./out && yarn compile:dev",
     "test": "node ./node_modules/vscode/bin/test",
+    "test:lint": "biome check --files-ignore-unknown=true --no-errors-on-unmatched --write .",
     "preversion": "yarn compile",
     "postversion": "git push origin HEAD && git push --tags",
     "vscode:prepublish": "yarn compile",
@@ -23,6 +24,8 @@
     "rorre": "1.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.1",
+    "@ivangabriele/biome-config": "1.0.2",
     "@types/fs-extra": "8.0.1",
     "@types/mocha": "5.2.7",
     "@types/node": "12.12.21",
