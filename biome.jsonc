@@ -1,9 +1,17 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
   "extends": ["@ivangabriele/biome-config"],
+  "files": {
+    "ignore": ["./.vscode-test/*", "./.yarn/*", "./node_modules/*"]
+  },
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
   }
 }

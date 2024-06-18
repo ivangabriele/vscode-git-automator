@@ -30,7 +30,7 @@
     "@ivangabriele/tsconfig-node": "2.0.0",
     "@types/fs-extra": "8.0.1",
     "@types/mocha": "5.2.7",
-    "@types/node": "12.12.21",
+    "@types/node": "20.14.5",
     "@types/vscode": "1.41.0",
     "fs-extra": "8.1.0",
     "rimraf": "3.0.0",
@@ -163,12 +163,7 @@
                 "minLength": 1
               },
               "state": {
-                "enum": [
-                  "ADDED",
-                  "DELETED",
-                  "MODIFIED",
-                  "RENAMED"
-                ]
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
               }
             }
           }
@@ -219,12 +214,7 @@
                 "minLength": 1
               },
               "state": {
-                "enum": [
-                  "ADDED",
-                  "DELETED",
-                  "MODIFIED",
-                  "RENAMED"
-                ]
+                "enum": ["ADDED", "DELETED", "MODIFIED", "RENAMED"]
               }
             }
           }
@@ -239,17 +229,8 @@
   },
   "publisher": "ivangabriele",
   "icon": "res/icon.png",
-  "categories": [
-    "Other",
-    "SCM Providers"
-  ],
-  "keywords": [
-    "addon",
-    "extension",
-    "git",
-    "shortcut",
-    "vscode"
-  ],
+  "categories": ["Other", "SCM Providers"],
+  "keywords": ["addon", "extension", "git", "shortcut", "vscode"],
   "repository": {
     "type": "git",
     "url": "https://github.com/ivangabriele/vscode-git-automator-legacy.git"

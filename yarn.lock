@@ -175,10 +175,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:12.12.21":
-  version: 12.12.21
-  resolution: "@types/node@npm:12.12.21"
-  checksum: 10c0/c05f371ec795377b5b05c5e8c782366037bd98460d7ca617e5b6a86e25f76515e486f99b0beef3101e903a07ba1c1da013ff79371788ebd41715fed4449bd85d
+"@types/node@npm:20.14.5":
+  version: 20.14.5
+  resolution: "@types/node@npm:20.14.5"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/06a8c304b5f7f190d4497807dc67ad09ee7b14ea2996bfdc823553c624698d8cab1ef9d16f8b764f20cb9eb11caa0e832787741e9ef70e1c89d620797ab28436
   languageName: node
   linkType: hard
 
@@ -1557,7 +1559,7 @@ __metadata:
     "@ivangabriele/tsconfig-node": "npm:2.0.0"
     "@types/fs-extra": "npm:8.0.1"
     "@types/mocha": "npm:5.2.7"
-    "@types/node": "npm:12.12.21"
+    "@types/node": "npm:20.14.5"
     "@types/vscode": "npm:1.41.0"
     await-to-js: "npm:2.1.1"
     fs-extra: "npm:8.1.0"

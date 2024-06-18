@@ -1,6 +1,6 @@
-import type { WorkspaceConfiguration } from "vscode"
+import type { WorkspaceConfiguration } from 'vscode'
 
-export type FileGitState = "ADDED" | "DELETED" | "MODIFIED" | "RENAMED"
+export type FileGitState = 'ADDED' | 'DELETED' | 'MODIFIED' | 'RENAMED'
 
 export interface GitStatusFile {
   oldPath?: string

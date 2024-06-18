@@ -1,54 +1,54 @@
-export default {
-  id: "Settings",
-  type: "object",
+export const SETTINGS_SCHEMA = {
+  id: 'Settings',
+  type: 'object',
   properties: {
     prefillCommitMessage: {
-      type: "object",
+      type: 'object',
       properties: {
         disableOptionalMessages: {
-          type: "boolean",
+          type: 'boolean',
         },
         forceLowerCase: {
-          type: "boolean",
+          type: 'boolean',
         },
         ignoreFileExtension: {
-          type: "boolean",
+          type: 'boolean',
         },
         replacePatternWith: {
-          type: "array",
+          type: 'array',
           items: {
-            type: "object",
+            type: 'object',
             properties: {
               pattern: {
-                type: "string",
+                type: 'string',
                 minLength: 1,
               },
               with: {
-                type: "string",
+                type: 'string',
               },
             },
           },
         },
         withFileWorkspacePath: {
-          type: "boolean",
+          type: 'boolean',
         },
         withGuessedAction: {
-          type: "boolean",
+          type: 'boolean',
         },
         withGuessedCustomActions: {
-          type: "array",
+          type: 'array',
           items: {
-            type: "object",
+            type: 'object',
             properties: {
               action: {
-                type: "string",
+                type: 'string',
               },
               pattern: {
-                type: "string",
+                type: 'string',
                 minLength: 1,
               },
               state: {
-                enum: ["ADDED", "DELETED", "MODIFIED", "RENAMED"],
+                enum: ['ADDED', 'DELETED', 'MODIFIED', 'RENAMED'],
               },
             },
           },

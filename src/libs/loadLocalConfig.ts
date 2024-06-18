@@ -1,32 +1,32 @@
-import * as fs from "fs"
-import * as path from "path"
-import * as vscode from "vscode"
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
+// biome-ignore lint/correctness/noNodejsModules: <explanation>
+import { readFileSync } from 'fs'
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
+// biome-ignore lint/correctness/noNodejsModules: <explanation>
+import { resolve } from 'path'
+import { window as vscodeWindow, workspace } from 'vscode'
 
-import isFile from "../helpers/isFile"
-import merge from "../helpers/merge"
-import normalizePattern from "../helpers/normalizePattern"
+import { deepMergeRight } from '../helpers/deepMergeRight'
+import { isFile } from '../helpers/isFile'
+import { normalizePattern } from '../helpers/normalizePattern'
 
-import type { Settings } from "../types"
+import type { Settings } from '../types'
 
-export default function (workspaceRootAbsolutePath: string): Settings {
-  const workspaceSettingsAbsolutePath = path.resolve(
-    workspaceRootAbsolutePath,
-    ".vscode",
-    "vscode-git-add-and-commit.json",
-  )
+export function loadLocalConfig(workspaceRootAbsolutePath: string): Settings {
+  const workspaceSettingsAbsolutePath = resolve(workspaceRootAbsolutePath, '.vscode', 'vscode-git-add-and-commit.json')
 
   const defaultSettings: Settings = {
-    prefillCommitMessage: vscode.workspace.getConfiguration("gaac"),
+    prefillCommitMessage: workspace.getConfiguration('gaac'),
   }
 
   let userSettings: Settings = {}
 
   if (isFile(workspaceSettingsAbsolutePath)) {
     try {
-      const settingsSource = fs.readFileSync(workspaceSettingsAbsolutePath, "utf8")
+      const settingsSource = readFileSync(workspaceSettingsAbsolutePath, 'utf8')
       userSettings = JSON.parse(settingsSource)
     } catch (err) {
-      vscode.window.showWarningMessage(`
+      vscodeWindow.showWarningMessage(`
         Can't load ".vscode/vscode-git-add-and-commit.json".
         Please check the file content format.
       `)
@@ -45,7 +45,7 @@ export default function (workspaceRootAbsolutePath: string): Settings {
   //   return defaultSettings
   // }
 
-  const normalizedSettings = merge(defaultSettings, userSettings)
+  const normalizedSettings = deepMergeRight(defaultSettings, userSettings)
 
   normalizedSettings.prefillCommitMessage.replacePatternWith =
     normalizedSettings.prefillCommitMessage.replacePatternWith.map((settingsPattern) => ({

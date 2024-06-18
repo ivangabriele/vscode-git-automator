@@ -1,8 +1,11 @@
-import exec from "./exec"
+import { exec } from './exec'
 
-export default async function (message: string): Promise<any> {
-  const command = "git"
-  const args = ["commit", "-m", `${message}`]
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+export async function gitCommit(message: string): Promise<any> {
+  const command = 'git'
+  const args = ['commit', '-m', `${message}`]
 
-  return exec(command, args)
+  const output = await exec(command, args)
+
+  return output
 }

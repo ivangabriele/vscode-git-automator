@@ -1,11 +1,16 @@
-import exec from "./exec"
+import { exec } from './exec'
 
-export default async function (filesRelativePaths: string[] = []): Promise<any> {
-  const allIndex = filesRelativePaths.indexOf("*")
-  if (allIndex !== -1) filesRelativePaths.splice(allIndex, 1)
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+export async function gitReset(filesRelativePaths: string[] = []): Promise<any> {
+  const allIndex = filesRelativePaths.indexOf('*')
+  if (allIndex !== -1) {
+    filesRelativePaths.splice(allIndex, 1)
+  }
 
-  const command = "git"
-  const args = ["reset"].concat(filesRelativePaths)
+  const command = 'git'
+  const args = ['reset'].concat(filesRelativePaths)
 
-  return exec(command, args)
+  const output = await exec(command, args)
+
+  return output
 }

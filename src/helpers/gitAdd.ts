@@ -1,8 +1,11 @@
-import exec from "./exec"
+import { exec } from './exec'
 
-export default async function (filesRelativePaths: string[]): Promise<any> {
-  const command = "git"
-  const args = ["add"].concat(filesRelativePaths)
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+export async function gitAdd(filesRelativePaths: string[]): Promise<any> {
+  const command = 'git'
+  const args = ['add'].concat(filesRelativePaths)
 
-  return exec(command, args)
+  const output = await exec(command, args)
+
+  return output
 }

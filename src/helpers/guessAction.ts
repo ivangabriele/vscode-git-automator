@@ -1,24 +1,29 @@
-import type { GuessCustomAction } from "../types"
+import type { GuessCustomAction } from '../types'
 
-export default function (commitMessage: string, state, customActions: GuessCustomAction[]): string {
+export function guessAction(commitMessage: string, state, customActions: GuessCustomAction[]): string {
   const customAction = customActions.find(({ pattern: actionPattern, state: actionState }: GuessCustomAction) => {
-    if (actionState !== state) return false
+    if (actionState !== state) {
+      return false
+    }
 
-    return typeof actionPattern === "string" ? commitMessage.includes(actionPattern) : actionPattern.test(commitMessage)
+    return typeof actionPattern === 'string' ? commitMessage.includes(actionPattern) : actionPattern.test(commitMessage)
   }, customActions)
 
   if (customAction === undefined) {
     switch (state) {
-      case "ADDED":
-        commitMessage += "create"
+      case 'ADDED':
+        // biome-ignore lint/style/noParameterAssign: <explanation>
+        commitMessage += 'create'
         break
 
-      case "DELETED":
-        commitMessage += "remove"
+      case 'DELETED':
+        // biome-ignore lint/style/noParameterAssign: <explanation>
+        commitMessage += 'remove'
         break
 
-      case "RENAMED":
-        commitMessage += "move"
+      case 'RENAMED':
+        // biome-ignore lint/style/noParameterAssign: <explanation>
+        commitMessage += 'move'
         break
 
       default:
@@ -28,5 +33,8 @@ export default function (commitMessage: string, state, customActions: GuessCusto
     return commitMessage
   }
 
-  return (commitMessage += customAction.action)
+  // biome-ignore lint/style/noParameterAssign: <explanation>
+  commitMessage += customAction.action
+
+  return commitMessage
 }

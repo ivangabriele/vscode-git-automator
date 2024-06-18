@@ -1,37 +1,47 @@
-import * as assert from "assert"
-import * as path from "path"
-import * as fs from "fs-extra"
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
+// biome-ignore lint/correctness/noNodejsModules: <explanation>
+import { strictEqual } from 'assert'
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
+// biome-ignore lint/correctness/noNodejsModules: <explanation>
+import { join } from 'path'
+import { copySync } from 'fs-extra'
 
-import exec from "../helpers/exec"
+import { exec } from '../helpers/exec'
 
-suite("Git Automator Extension Tests", () => {
-  const fixturesPath = path.join(__dirname, "fixtures")
-  const fixturesSourcePath = path.join(__dirname, "..", "..", "src", "test", "fixtures")
+// biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
+suite('Git Automator Extension Tests', () => {
+  const fixturesPath = join(__dirname, 'fixtures')
+  const fixturesSourcePath = join(__dirname, '..', '..', 'src', 'test', 'fixtures')
 
+  // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
   suiteSetup(() => {
-    fs.copySync(path.join(fixturesSourcePath, "sample.md"), path.join(fixturesPath, "sample.md"))
+    copySync(join(fixturesSourcePath, 'sample.md'), join(fixturesPath, 'sample.md'))
   })
 
-  test("Test helpers/exec()", async () => {
-    let command, args
+  // biome-ignore lint/correctness/noUndeclaredVariables: <explanation>
+  test('Test helpers/exec()', async () => {
+    let command: string
     switch (process.platform) {
-      case "win32":
-        command = "type"
+      case 'win32':
+        command = 'type'
         break
 
       default:
-        command = "cat"
+        command = 'cat'
         break
     }
 
-    let o, x
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    let output: any
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    let error: any
     try {
-      o = await exec(command, [path.join(fixturesPath, "sample.md")])
+      output = await exec(command, [join(fixturesPath, 'sample.md')])
     } catch (e) {
-      x = e
+      error = e
     }
 
-    assert.strictEqual(undefined, x)
-    assert.strictEqual(`# Hello World !\n`, o)
+    strictEqual(undefined, error)
+    strictEqual('# Hello World !\n', output)
   })
 })

@@ -1,34 +1,44 @@
-import * as path from "path"
-import * as vscode from "vscode"
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
+// biome-ignore lint/correctness/noNodejsModules: <explanation>
+import { relative } from 'path'
+import { type ExtensionContext, commands, window as vscodeWindow, workspace } from 'vscode'
 
-import addAndCommitFiles from "./libs/addAndCommitFiles"
-import loadLocalConfig from "./libs/loadLocalConfig"
-import pushLocalCommits from "./libs/pushLocalCommits"
+import { addAndCommitFiles } from './libs/addAndCommitFiles'
+import { loadLocalConfig } from './libs/loadLocalConfig'
+import { pushLocalCommits } from './libs/pushLocalCommits'
 
-import type { Settings } from "./types"
+import type { Settings } from './types'
 
-const workspaceRootAbsolutePath = vscode.workspace.workspaceFolders[0].uri.fsPath
+export function activate(context: ExtensionContext) {
+  const workspaceFolders = workspace.workspaceFolders
+  if (!workspaceFolders) {
+    return
+  }
+  const workspaceRootAbsolutePath = workspaceFolders[0].uri.fsPath
 
-export function activate(context: vscode.ExtensionContext) {
   const settings: Settings = loadLocalConfig(workspaceRootAbsolutePath)
 
-  const addAndCommitAllFilesDisposable = vscode.commands.registerCommand(
-    "extension.vscode-git-automator.addAndCommitAllFiles",
-    () => addAndCommitFiles(["*"], settings),
+  const addAndCommitAllFilesDisposable = commands.registerCommand(
+    'extension.vscode-git-automator.addAndCommitAllFiles',
+    () => {
+      addAndCommitFiles(['*'], settings)
+    },
   )
 
-  const addAndCommitCurrentFileDisposable = vscode.commands.registerCommand(
-    "extension.vscode-git-automator.addAndCommitCurrentFile",
-    () =>
-      addAndCommitFiles(
-        [path.relative(workspaceRootAbsolutePath, vscode.window.activeTextEditor.document.fileName)],
-        settings,
-      ),
+  const addAndCommitCurrentFileDisposable = commands.registerCommand(
+    'extension.vscode-git-automator.addAndCommitCurrentFile',
+    () => {
+      const activeTextEditor = vscodeWindow.activeTextEditor
+      if (!activeTextEditor) {
+        return
+      }
+
+      addAndCommitFiles([relative(workspaceRootAbsolutePath, activeTextEditor.document.fileName)], settings)
+    },
   )
 
-  const pushLocalCommitsDisposable = vscode.commands.registerCommand(
-    "extension.vscode-git-automator.pushLocalCommits",
-    () => pushLocalCommits(settings),
+  const pushLocalCommitsDisposable = commands.registerCommand('extension.vscode-git-automator.pushLocalCommits', () =>
+    pushLocalCommits(settings),
   )
 
   context.subscriptions.push(
@@ -38,4 +48,6 @@ export function activate(context: vscode.ExtensionContext) {
   )
 }
 
-export function deactivate() {}
+export function deactivate() {
+  return
+}
