@@ -16,7 +16,7 @@ jobs:
           cache: yarn
           node-version: 20
       - name: Install
-        uses: ./.github/actions/install
+        uses: yarn --immutable
       - name: Lint code
         run: yarn test:lint
 
@@ -33,7 +33,7 @@ jobs:
           cache: yarn
           node-version: 20
       - name: Install
-        uses: ./.github/actions/install
+        uses: yarn --immutable
       - name: Type
         run: yarn test:type
 
@@ -50,7 +50,7 @@ jobs:
           cache: yarn
           node-version: 20
       - name: Install
-        uses: ./.github/actions/install
+        uses: yarn --immutable
       - name: Test
         # run: yarn test:unit --coverage
         run: yarn test:unit
