@@ -195,6 +195,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-node-resolve@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@rollup/plugin-node-resolve@npm:6.0.0"
+  dependencies:
+    "@rollup/pluginutils": "npm:^3.0.0"
+    "@types/resolve": "npm:0.0.8"
+    builtin-modules: "npm:^3.1.0"
+    is-module: "npm:^1.0.0"
+    resolve: "npm:^1.11.1"
+  peerDependencies:
+    rollup: ^1.20.0
+  checksum: 10c0/f134bb54fdcbb762a42eee5b4175725bd48b9afec8e6f536dadf6efeb5e038233cd42dbaf925e49804555946a3cf4fe22853a4b2d403ec332fd6c2d551b85a03
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "@rollup/pluginutils@npm:3.1.0"
+  dependencies:
+    "@types/estree": "npm:0.0.39"
+    estree-walker: "npm:^1.0.1"
+    picomatch: "npm:^2.2.2"
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0
+  checksum: 10c0/7151753160d15ba2b259461a6c25b3932150994ea52dba8fd3144f634c7647c2e56733d986e2c15de67c4d96a9ee7d6278efa6d2e626a7169898fd64adc0f90c
+  languageName: node
+  linkType: hard
+
 "@rollup/pluginutils@npm:^4.1.2":
   version: 4.2.1
   resolution: "@rollup/pluginutils@npm:4.2.1"
@@ -216,6 +244,13 @@ __metadata:
   version: 1.0.5
   resolution: "@types/estree@npm:1.0.5"
   checksum: 10c0/b3b0e334288ddb407c7b3357ca67dbee75ee22db242ca7c56fe27db4e1a31989cb8af48a84dd401deb787fe10cc6b2ab1ee82dc4783be87ededbe3d53c79c70d
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:0.0.39":
+  version: 0.0.39
+  resolution: "@types/estree@npm:0.0.39"
+  checksum: 10c0/f0af6c95ac1988c4827964bd9d3b51d24da442e2188943f6dfcb1e1559103d5d024d564b2e9d3f84c53714a02a0a7435c7441138eb63d9af5de4dfc66cdc0d92
   languageName: node
   linkType: hard
 
@@ -656,6 +691,13 @@ __metadata:
   version: 0.6.1
   resolution: "estree-walker@npm:0.6.1"
   checksum: 10c0/6dabc855faa04a1ffb17b6a9121b6008ba75ab5a163ad9dc3d7fca05cfda374c5f5e91418d783496620ca75e99a73c40874d8b75f23b4117508cc8bde78e7b41
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "estree-walker@npm:1.0.1"
+  checksum: 10c0/fa9e5f8c1bbe8d01e314c0f03067b64a4f22d4c58410fc5237060d0c15b81e58c23921c41acc60abbdab490f1fdfcbd6408ede2d03ca704454272e0244d61a55
   languageName: node
   linkType: hard
 
@@ -1551,21 +1593,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-node-resolve@npm:5.2.0":
-  version: 5.2.0
-  resolution: "rollup-plugin-node-resolve@npm:5.2.0"
-  dependencies:
-    "@types/resolve": "npm:0.0.8"
-    builtin-modules: "npm:^3.1.0"
-    is-module: "npm:^1.0.0"
-    resolve: "npm:^1.11.1"
-    rollup-pluginutils: "npm:^2.8.1"
-  peerDependencies:
-    rollup: ">=1.11.0"
-  checksum: 10c0/4f9903a1042f6eab1495e044ac64540c054d89add7b3f09ea98cfef869628ad0749aebffd946fb4793cb29841c4711bbdd5e6f7fcaecf1eb9c30f67968e1dcb5
-  languageName: node
-  linkType: hard
-
 "rollup-plugin-typescript2@npm:0.36.0":
   version: 0.36.0
   resolution: "rollup-plugin-typescript2@npm:0.36.0"
@@ -1965,6 +1992,7 @@ __metadata:
     "@biomejs/biome": "npm:1.9.4"
     "@ivangabriele/biome-config": "npm:1.5.0"
     "@ivangabriele/tsconfig-node": "npm:2.0.0"
+    "@rollup/plugin-node-resolve": "npm:6.0.0"
     "@types/fs-extra": "npm:8.1.5"
     "@types/mocha": "npm:10.0.10"
     "@types/node": "npm:22.15.31"
@@ -1974,7 +2002,6 @@ __metadata:
     rimraf: "npm:3.0.2"
     rollup: "npm:2.79.2"
     rollup-plugin-commonjs: "npm:10.1.0"
-    rollup-plugin-node-resolve: "npm:5.2.0"
     rollup-plugin-typescript2: "npm:0.36.0"
     rorre: "npm:1.2.0"
     tslint: "npm:5.20.1"
