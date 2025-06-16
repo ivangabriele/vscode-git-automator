@@ -228,10 +228,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mocha@npm:5.2.7":
-  version: 5.2.7
-  resolution: "@types/mocha@npm:5.2.7"
-  checksum: 10c0/070236400bad0bef1a48dcc7d858febed38656fbb2248a86473a0d388cfe88ce07bcaffee2348f5537762fcb0de7fc72cdb2e98a99859c16f32c2f9012e83cd5
+"@types/mocha@npm:10.0.10":
+  version: 10.0.10
+  resolution: "@types/mocha@npm:10.0.10"
+  checksum: 10c0/d2b8c48138cde6923493e42b38e839695eb42edd04629abe480a8f34c0e3f50dd82a55832c2e8d2b6e6f9e4deb492d7d733e600fbbdd5a0ceccbcfc6844ff9d5
   languageName: node
   linkType: hard
 
@@ -1966,7 +1966,7 @@ __metadata:
     "@ivangabriele/biome-config": "npm:1.5.0"
     "@ivangabriele/tsconfig-node": "npm:2.0.0"
     "@types/fs-extra": "npm:8.1.5"
-    "@types/mocha": "npm:5.2.7"
+    "@types/mocha": "npm:10.0.10"
     "@types/node": "npm:20.17.11"
     "@types/vscode": "npm:1.96.0"
     await-to-js: "npm:2.1.1"
