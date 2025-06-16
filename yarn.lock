@@ -262,10 +262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/vscode@npm:1.96.0":
-  version: 1.96.0
-  resolution: "@types/vscode@npm:1.96.0"
-  checksum: 10c0/3fb7ba394f6a8d6a4725b7ad0f0a4dd506371af934f7dc709989fd4b8f587cce96efb042e0d3af2b416b4bb74ecb2a5375c61f21b6b0cd86d85c6bdd2dcb2828
+"@types/vscode@npm:1.101.0":
+  version: 1.101.0
+  resolution: "@types/vscode@npm:1.101.0"
+  checksum: 10c0/df72706249525c626e2858a9729f079411c19a54f009b1cf6e743b7e783c847eaf95ed6c02dffde04947a2b4eea2ccbcd64d6b530402495ff81c973ad7bafb79
   languageName: node
   linkType: hard
 
@@ -1892,23 +1892,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.7.2":
-  version: 5.7.2
-  resolution: "typescript@npm:5.7.2"
+"typescript@npm:5.8.3":
+  version: 5.8.3
+  resolution: "typescript@npm:5.8.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/a873118b5201b2ef332127ef5c63fb9d9c155e6fdbe211cbd9d8e65877283797cca76546bad742eea36ed7efbe3424a30376818f79c7318512064e8625d61622
+  checksum: 10c0/5f8bb01196e542e64d44db3d16ee0e4063ce4f3e3966df6005f2588e86d91c03e1fb131c2581baf0fb65ee79669eea6e161cd448178986587e9f6844446dbb48
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>":
-  version: 5.7.2
-  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=5786d5"
+"typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>":
+  version: 5.8.3
+  resolution: "typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/f3b8082c9d1d1629a215245c9087df56cb784f9fb6f27b5d55577a20e68afe2a889c040aacff6d27e35be165ecf9dca66e694c42eb9a50b3b2c451b36b5675cb
+  checksum: 10c0/39117e346ff8ebd87ae1510b3a77d5d92dae5a89bde588c747d25da5c146603a99c8ee588c7ef80faaf123d89ed46f6dbd918d534d641083177d5fac38b8a1cb
   languageName: node
   linkType: hard
 
@@ -1968,7 +1968,7 @@ __metadata:
     "@types/fs-extra": "npm:8.1.5"
     "@types/mocha": "npm:10.0.10"
     "@types/node": "npm:22.15.31"
-    "@types/vscode": "npm:1.96.0"
+    "@types/vscode": "npm:1.101.0"
     await-to-js: "npm:2.1.1"
     fs-extra: "npm:8.1.0"
     rimraf: "npm:3.0.2"
@@ -1978,7 +1978,7 @@ __metadata:
     rollup-plugin-typescript2: "npm:0.36.0"
     rorre: "npm:1.2.0"
     tslint: "npm:5.20.1"
-    typescript: "npm:5.7.2"
+    typescript: "npm:5.8.3"
     vscode: "npm:1.1.37"
   languageName: unknown
   linkType: soft
