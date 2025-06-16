@@ -34,7 +34,7 @@
     "@types/vscode": "1.96.0",
     "fs-extra": "8.1.0",
     "rimraf": "3.0.2",
-    "rollup": "1.29.0",
+    "rollup": "2.79.2",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-typescript2": "0.36.0",
