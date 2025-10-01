@@ -148,12 +148,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivangabriele/biome-config@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@ivangabriele/biome-config@npm:1.5.0"
+"@ivangabriele/biome-config@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@ivangabriele/biome-config@npm:2.0.0"
   peerDependencies:
-    "@biomejs/biome": ^1
-  checksum: 10c0/3fe3064562d12d9fb797c3e24044c88ce14cae0b80586849dfc0830750a8de42bd685987ef9491bb25cacd6ece9e88bb397c7a3d9c909543ccd8f88d8c999719
+    "@biomejs/biome": ^2
+  checksum: 10c0/3923cec3a84fb5f4d4177c12c4efee586f2d1207ff6b0c59d1e7ffac126f88818293d1142d0619ba5436a3101d55c678512e9f28548847b1f08f18b3f0e45765
   languageName: node
   linkType: hard
 
@@ -1990,7 +1990,7 @@ __metadata:
   resolution: "vscode-git-add-and-commit@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.9.4"
-    "@ivangabriele/biome-config": "npm:1.5.0"
+    "@ivangabriele/biome-config": "npm:2.0.0"
     "@ivangabriele/tsconfig-node": "npm:2.0.0"
     "@rollup/plugin-node-resolve": "npm:6.0.0"
     "@types/fs-extra": "npm:8.1.5"
