@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: yarn
-          node-version: 20
+          node-version: 24
       - name: Install
         run: yarn --immutable
       - name: Lint code
@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: yarn
-          node-version: 20
+          node-version: 24
       - name: Install
         run: yarn --immutable
       - name: Type
@@ -56,7 +56,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: yarn
-          node-version: 20
+          node-version: 24
       - name: Install
         run: yarn --immutable
       - name: Test
