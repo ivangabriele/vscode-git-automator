@@ -148,12 +148,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivangabriele/biome-config@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@ivangabriele/biome-config@npm:1.5.0"
+"@ivangabriele/biome-config@npm:1.5.1":
+  version: 1.5.1
+  resolution: "@ivangabriele/biome-config@npm:1.5.1"
   peerDependencies:
     "@biomejs/biome": ^1
-  checksum: 10c0/3fe3064562d12d9fb797c3e24044c88ce14cae0b80586849dfc0830750a8de42bd685987ef9491bb25cacd6ece9e88bb397c7a3d9c909543ccd8f88d8c999719
+  checksum: 10c0/d93aa39842031f5d12e7707173f1e46563b83aa8cdf3213c21bc9406d71c363748b9c7d430264497a9f83f1917d2c90d8e881cd86fd00de7062f7c231906544c
   languageName: node
   linkType: hard
 
@@ -195,9 +195,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@rollup/plugin-node-resolve@npm:6.0.0"
+"@rollup/plugin-node-resolve@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@rollup/plugin-node-resolve@npm:6.1.0"
   dependencies:
     "@rollup/pluginutils": "npm:^3.0.0"
     "@types/resolve": "npm:0.0.8"
@@ -206,7 +206,7 @@ __metadata:
     resolve: "npm:^1.11.1"
   peerDependencies:
     rollup: ^1.20.0
-  checksum: 10c0/f134bb54fdcbb762a42eee5b4175725bd48b9afec8e6f536dadf6efeb5e038233cd42dbaf925e49804555946a3cf4fe22853a4b2d403ec332fd6c2d551b85a03
+  checksum: 10c0/6a8e3493f2193b738d53482167e857c060804a4581a891b3bea65b276e6273d60c4248f4264a0f4ed07a044188cff32172bee167744ec6b44000335e30c0c75b
   languageName: node
   linkType: hard
 
@@ -289,12 +289,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.15.31":
-  version: 22.15.31
-  resolution: "@types/node@npm:22.15.31"
+"@types/node@npm:22.19.0":
+  version: 22.19.0
+  resolution: "@types/node@npm:22.19.0"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10c0/ef7d5dc890da41cfd554d35ab8998bc18be9e3a0caa642e720599ac4410a94a4879766e52b3c9cafa06c66b7b8aebdc51f322cf67df23a6489927890196a316d
+  checksum: 10c0/66b98fcd38efb4ae58c628d61fed2b8f17c830eb665d8bceabc4174cae1dd81b8e4caac4c70d7dc929f9f76a3dc46cb21f480e904d0b898297bd12c0a2d1571a
   languageName: node
   linkType: hard
 
@@ -307,10 +307,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/vscode@npm:1.101.0":
-  version: 1.101.0
-  resolution: "@types/vscode@npm:1.101.0"
-  checksum: 10c0/df72706249525c626e2858a9729f079411c19a54f009b1cf6e743b7e783c847eaf95ed6c02dffde04947a2b4eea2ccbcd64d6b530402495ff81c973ad7bafb79
+"@types/vscode@npm:1.105.0":
+  version: 1.105.0
+  resolution: "@types/vscode@npm:1.105.0"
+  checksum: 10c0/f07d1c3b2bb1984af905f5b4600909ba9b3400d3790d1f970127ca2fd6533199386b89660676c060a20c70f15e49a0b1c0188456ce0bf6c83957fc9e8e390610
   languageName: node
   linkType: hard
 
@@ -1917,23 +1917,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.8.3":
-  version: 5.8.3
-  resolution: "typescript@npm:5.8.3"
+"typescript@npm:5.9.3":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/5f8bb01196e542e64d44db3d16ee0e4063ce4f3e3966df6005f2588e86d91c03e1fb131c2581baf0fb65ee79669eea6e161cd448178986587e9f6844446dbb48
+  checksum: 10c0/6bd7552ce39f97e711db5aa048f6f9995b53f1c52f7d8667c1abdc1700c68a76a308f579cd309ce6b53646deb4e9a1be7c813a93baaf0a28ccd536a30270e1c5
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>":
-  version: 5.8.3
-  resolution: "typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"
+"typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/39117e346ff8ebd87ae1510b3a77d5d92dae5a89bde588c747d25da5c146603a99c8ee588c7ef80faaf123d89ed46f6dbd918d534d641083177d5fac38b8a1cb
+  checksum: 10c0/ad09fdf7a756814dce65bc60c1657b40d44451346858eea230e10f2e95a289d9183b6e32e5c11e95acc0ccc214b4f36289dcad4bf1886b0adb84d711d336a430
   languageName: node
   linkType: hard
 
@@ -1981,13 +1981,13 @@ __metadata:
   resolution: "vscode-git-add-and-commit@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.9.4"
-    "@ivangabriele/biome-config": "npm:1.5.0"
+    "@ivangabriele/biome-config": "npm:1.5.1"
     "@ivangabriele/tsconfig-node": "npm:2.0.0"
-    "@rollup/plugin-node-resolve": "npm:6.0.0"
+    "@rollup/plugin-node-resolve": "npm:6.1.0"
     "@types/fs-extra": "npm:11.0.4"
     "@types/mocha": "npm:10.0.10"
-    "@types/node": "npm:22.15.31"
-    "@types/vscode": "npm:1.101.0"
+    "@types/node": "npm:22.19.0"
+    "@types/vscode": "npm:1.105.0"
     await-to-js: "npm:2.1.1"
     fs-extra: "npm:11.3.2"
     rimraf: "npm:3.0.2"
@@ -1996,7 +1996,7 @@ __metadata:
     rollup-plugin-typescript2: "npm:0.36.0"
     rorre: "npm:1.2.0"
     tslint: "npm:5.20.1"
-    typescript: "npm:5.8.3"
+    typescript: "npm:5.9.3"
     vscode: "npm:1.1.37"
   languageName: unknown
   linkType: soft
