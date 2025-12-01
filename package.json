@@ -33,7 +33,7 @@
     "@types/node": "24.10.0",
     "@types/vscode": "1.105.0",
     "fs-extra": "11.3.2",
-    "rimraf": "3.0.2",
+    "rimraf": "6.1.2",
     "rollup": "2.79.2",
     "rollup-plugin-commonjs": "10.1.0",
     "@rollup/plugin-node-resolve": "6.1.0",
