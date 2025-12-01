@@ -289,12 +289,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:24.10.0":
-  version: 24.10.0
-  resolution: "@types/node@npm:24.10.0"
+"@types/node@npm:24.10.1":
+  version: 24.10.1
+  resolution: "@types/node@npm:24.10.1"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/f82ed7194e16f5590ef7afdc20c6d09068c76d50278b485ede8f0c5749683536e3064ffa8def8db76915196afb3724b854aa5723c64d6571b890b14492943b46
+  checksum: 10c0/d6bca7a78f550fbb376f236f92b405d676003a8a09a1b411f55920ef34286ee3ee51f566203920e835478784df52662b5b2af89159d9d319352e9ea21801c002
   languageName: node
   linkType: hard
 
@@ -307,10 +307,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/vscode@npm:1.105.0":
-  version: 1.105.0
-  resolution: "@types/vscode@npm:1.105.0"
-  checksum: 10c0/f07d1c3b2bb1984af905f5b4600909ba9b3400d3790d1f970127ca2fd6533199386b89660676c060a20c70f15e49a0b1c0188456ce0bf6c83957fc9e8e390610
+"@types/vscode@npm:1.106.1":
+  version: 1.106.1
+  resolution: "@types/vscode@npm:1.106.1"
+  checksum: 10c0/699bb2b1932cf885bc863d1a978eeb07f263150544f56eb7a2b59f4ed521e654f9a5f3357c5b3a45e56af07b876e7936140075ba4a2acaa9641a8ad8e0ab9f05
   languageName: node
   linkType: hard
 
@@ -1986,8 +1986,8 @@ __metadata:
     "@rollup/plugin-node-resolve": "npm:6.1.0"
     "@types/fs-extra": "npm:11.0.4"
     "@types/mocha": "npm:10.0.10"
-    "@types/node": "npm:24.10.0"
-    "@types/vscode": "npm:1.105.0"
+    "@types/node": "npm:24.10.1"
+    "@types/vscode": "npm:1.106.1"
     await-to-js: "npm:2.1.1"
     fs-extra: "npm:11.3.2"
     rimraf: "npm:3.0.2"
