@@ -1305,7 +1305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^0.5.1":
+"mkdirp@npm:^0.5.3":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
   dependencies:
@@ -1867,7 +1867,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.0, tslib@npm:^1.8.1":
+"tslib@npm:^1.13.0, tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10c0/69ae09c49eea644bc5ebe1bca4fa4cc2c82b7b3e02f43b84bd891504edf66dbc6b2ec0eef31a957042de2269139e4acff911e6d186a258fb14069cd7f6febce2
@@ -1881,9 +1881,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslint@npm:5.20.1":
-  version: 5.20.1
-  resolution: "tslint@npm:5.20.1"
+"tslint@npm:6.1.3":
+  version: 6.1.3
+  resolution: "tslint@npm:6.1.3"
   dependencies:
     "@babel/code-frame": "npm:^7.0.0"
     builtin-modules: "npm:^1.1.1"
@@ -1893,16 +1893,16 @@ __metadata:
     glob: "npm:^7.1.1"
     js-yaml: "npm:^3.13.1"
     minimatch: "npm:^3.0.4"
-    mkdirp: "npm:^0.5.1"
+    mkdirp: "npm:^0.5.3"
     resolve: "npm:^1.3.2"
     semver: "npm:^5.3.0"
-    tslib: "npm:^1.8.0"
+    tslib: "npm:^1.13.0"
     tsutils: "npm:^2.29.0"
   peerDependencies:
-    typescript: ">=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev"
+    typescript: ">=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev || >= 4.0.0-dev"
   bin:
-    tslint: ./bin/tslint
-  checksum: 10c0/4331ac33dd7c709639147ea0a75282f4c73534bac9ad511a56458276c93baf69d7057e5bf9b74fb13782f78a6479d9f2df86e8868be65f511541e3fe710695a7
+    tslint: bin/tslint
+  checksum: 10c0/04717de06d187ee46ffa99e28af80f1b5a2edbec051e32b43ca681da625a61e94e5eb9ebb638fafe07975fb3536760ffd772f76c57134db723a9ecff6aeac380
   languageName: node
   linkType: hard
 
@@ -1995,7 +1995,7 @@ __metadata:
     rollup-plugin-commonjs: "npm:10.1.0"
     rollup-plugin-typescript2: "npm:0.36.0"
     rorre: "npm:1.2.0"
-    tslint: "npm:5.20.1"
+    tslint: "npm:6.1.3"
     typescript: "npm:5.9.3"
     vscode: "npm:1.1.37"
   languageName: unknown
