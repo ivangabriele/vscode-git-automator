@@ -39,7 +39,7 @@
     "@rollup/plugin-node-resolve": "6.1.0",
     "rollup-plugin-typescript2": "0.36.0",
     "tslint": "5.20.1",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "vscode": "1.1.37"
   },
   "packageManager": "yarn@4.11.0",
