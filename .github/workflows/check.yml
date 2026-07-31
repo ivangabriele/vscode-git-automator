@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           cache: yarn
           node-version: 24
@@ -36,7 +36,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           cache: yarn
           node-version: 24
@@ -53,7 +53,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           cache: yarn
           node-version: 24
